@@ -186,7 +186,7 @@ const NavBar = () => {
               target={"_blank"}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
-              className="w-6 mr-3 sm:mx-1"
+              className="w-6 mr-3"
             >
               <StackOverflowIcon />
             </motion.a>
@@ -202,7 +202,7 @@ const NavBar = () => {
             <motion.a
               href="https://linkedin.com/in/rashedrahat"
               target={"_blank"}
-              className="w-6 mx-3 sm:mx-1"
+              className="w-6 mx-3"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
             >
@@ -211,7 +211,7 @@ const NavBar = () => {
 
             <button
               onClick={() => setMode(mode === "light" ? "dark" : "light")}
-              className={`w-6 h-6 ml-3 flex items-center justify-center rounded-full p-1
+              className={`w-6 h-6 flex items-center justify-center rounded-full p-1
       ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}
       `}
             >
