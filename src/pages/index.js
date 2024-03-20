@@ -43,7 +43,7 @@ export default function Home() {
                                 Explore my latest projects, showcasing my expertise in React.js
                                 and web development.
                             </p>
-                            {/*<div className="flex items-center self-start mt-2 lg:self-center">
+                            <div className="flex items-center self-start mt-2 lg:self-center">
                                 <Link
                                     href="/Resume_of_RashedRahat.pdf"
                                     target={"_blank"}
@@ -65,7 +65,7 @@ export default function Home() {
                                 >
                                     Contact
                                 </Link>
-                            </div>*/}
+                            </div>
                         </div>
                     </div>
                 </Layout>
