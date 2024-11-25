@@ -8,7 +8,7 @@ import { useInView, useMotionValue, useSpring } from "framer-motion";
 import Head from "next/head";
 import Image from "next/image";
 import React, { useEffect, useRef } from "react";
-import profilePic from "../../public/images/profile/my-pic-4.png";
+import profilePic from "../../public/images/profile/my-pic-2.jpg";
 
 const AnimatedNumbers = ({ value }) => {
   const ref = useRef(null);
@@ -48,30 +48,17 @@ const about = () => {
                 className="mb-16 !leading-tight lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8"
             />
             <div className="grid w-full grid-cols-8 gap-16 sm:gap-8">
-              <div className="col-span-3 flex flex-col items-start justify-start xl:col-span-4 md:order-2 md:col-span-8">
+              <div
+                  className="col-span-3 flex flex-col items-start justify-start xl:col-span-4 md:order-2 md:col-span-8">
                 <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">
                   Biography
                 </h2>
                 <p className="font-medium text-justify">
-                  Hi, I&apos;m Rashed Rahat, a web developer with a passion for
-                  creating beautiful, functional, and user-centered digital
-                  experiences. With 5+ years of experience in the field. I am
-                  always looking for new and innovative ways to bring my
-                  clients&apos; visions to life.
+                  Hi, I’m Rashed Rahat, a Senior Software Engineer specializing in Frontend Development 🖥️ with over 5+ years of experience delivering scalable, user-focused web solutions 🚀. I’ve worked with global teams to craft intuitive digital experiences for e-commerce 🛒 and educational technology 🎓 sectors.
                 </p>
 
-                <p className="my-4 font-medium text-justify">
-                  I believe that design is about more than just making things look
-                  pretty – it&apos;s about solving problems and creating
-                  intuitive, enjoyable experiences for users.
-                </p>
-
-                <p className="font-medium text-justify">
-                  Whether I&apos;m working on a website, web app, or other digital
-                  product, I bring my commitment to design excellence and
-                  user-centered thinking to every project I work on. I look
-                  forward to the opportunity to bring my skills and passion to
-                  your next project.
+                <p className="mt-4 font-medium text-justify">
+                  I’m passionate about bridging technology and user needs, building responsive applications with React, Next.js, and TypeScript 🛠 to deliver innovative solutions. Let’s create something impactful together! ✨
                 </p>
               </div>
 
@@ -119,7 +106,7 @@ bg-light p-8 dark:bg-dark dark:border-light xl:col-span-4 md:order-1 md:col-span
 
                 <div className="flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  <AnimatedNumbers value={4} />+
+                  <AnimatedNumbers value={5} />+
                 </span>
                   <h2
                       className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base

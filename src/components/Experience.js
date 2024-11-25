@@ -64,23 +64,33 @@ const Experience = () => {
 
                 <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
                     <Details
-                        position="Sr. Software Engineer, Front-end (ReactJS)"
+                        position="Senior Software Engineer, Front-end"
                         company="Shikho"
                         companyLink="https://shikho.com"
                         time="Aug 2023 - Present"
                         type="Full-time"
-                        address="Banani, Dhaka"
-                        work='Guiding junior developers in design, development, deployment, and maintenance.'
+                        address="Remote"
+                        work='Successfully designed and optimized seamless exam platforms handling 10,000+ concurrent users, achieving a 20-25% improvement in website load times for enhanced user retention. Mentored junior developers to elevate team productivity and ensure high-quality code delivery.'
                     />
 
                     <Details
-                        position="Software Engineer, Front-end (ReactJS)"
+                        position="Software Engineer, Front-end"
                         company="Shikho"
                         companyLink="https://shikho.com"
                         time="Dec 2021 - Jul 2022"
                         type="Full-time"
                         address="Banani, Dhaka"
-                        work="Highly accomplished professional with a track record of saving $1M annually through third-party tool integration, improved in-house product functionality by 15-25%, stayed up-to-date with new release versions."
+                        work="Effectively developed and maintained high-traffic websites serving over 1M quarterly unique users. Collaborated with UX designers to enhance engagement and conversion rates, while integrating third-party tools to streamline operations and save BDT 1 million annually."
+                    />
+
+                    <Details
+                        position="Software Engineer, Front-end"
+                        company="VipaHelda"
+                        companyLink="https://vipahelda.com"
+                        time="Jan 2023 - Oct 2024"
+                        type="Contract"
+                        address="Remote"
+                        work="Developed and maintained web applications tailored to client-specific requirements, collaborating remotely with teams to deliver high-quality, scalable solutions."
                     />
 
                     <Details
@@ -88,18 +98,19 @@ const Experience = () => {
                         company="Valkyrie"
                         companyLink="https://valkyrie-it.com"
                         time="Oct 2021 - Mar 2022"
-                        type="Part-time (Remote)"
+                        type="Part-time"
+                        address="Remote"
                         work="Designed and developed MVPs or minimum viable products that offer the core benefits of the company's clients to its target users."
                     />
 
                     <Details
-                        position="Software Engineer, Front-end (ReactJS)"
+                        position="Software Engineer, Front-end"
                         company="Misfit"
                         companyLink="https://misfit.tech"
                         time="Mar 2021 - Nov 2021"
                         type="Full-time"
                         address="Banani, Dhaka"
-                        work="Implemented React expertise to improve component lifecycle procedures, achieving a 24% faster turnaround, 100% deadline adherence, and implemented a responsive, mobile-first approach that increased mobile traffic by 20%."
+                        work="Optimized front-end performance with a mobile-first approach, boosting mobile traffic by 25%. Reduced code review discrepancies by 20% through adherence to web standards and collaborated with back-end developers to resolve issues effectively."
                     />
 
                     <Details
@@ -107,8 +118,9 @@ const Experience = () => {
                         company="Domatic"
                         companyLink="https://domatictechnologies.com"
                         time="Mar 2020 - Jun 2021"
-                        type="Part-time (Remote)"
-                        work="Utilized React principles to design customer-facing responsive UIs, implemented Node.js for back-end services, and demonstrated strong troubleshooting and debugging skills in interface software and application codes."
+                        type="Part-time"
+                        address="Remote"
+                        work="Developed highly responsive customer-facing UIs using React and built efficient back-end services with Node.js to support diverse business processes. Identified and resolved interface issues by troubleshooting and debugging application code."
                     />
 
                     <Details
@@ -116,18 +128,19 @@ const Experience = () => {
                         company="DoorSoft"
                         companyLink="https://doorsoft.co"
                         time="Apr 2020 - Apr 2021"
-                        type="Part-time (Remote)"
-                        work="Designed and implemented Laravel-based web applications, implemented server-side logic for front-end inputs, and adeptly identified and fixed code bugs."
+                        type="Part-time"
+                        address="Remote"
+                        work="Designed and implemented web applications using the Laravel framework, developing server-side logic to process front-end inputs and ensure smooth functionality. Proactively identified and resolved code bugs to maintain application reliability."
                     />
 
                     <Details
                         position="Junior Software Engineer"
                         company="Workspace"
-                        companyLink="https://www.workspaceit.com"
+                        companyLink="https://workspaceit.com"
                         time="Jun 2019 - Mar 2021"
                         type="Full-time"
                         address="Nikunja 2, Dhaka"
-                        work="Accomplished training projects utilizing Node.js and React to develop industry-standard web applications, demonstrated expertise in software testing, installation, configuration, and troubleshooting, and showcased proficiency in developing a wide range of SQL queries in MySQL and MongoDB."
+                        work="Developed over 200 SQL queries in MySQL and MongoDB, contributing to the creation of 20+ websites using modern frameworks. Ensured software reliability through thorough testing and troubleshooting."
                     />
                 </ul>
             </div>

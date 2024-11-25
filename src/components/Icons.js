@@ -444,9 +444,9 @@ export const CircularText = ({ className, ...rest }) => (
         a 37,37 0 1,1 74,0
         a 37,37 0 1,1 -74,0"/>
       </defs>
-      <text fontSize="15">
+      <text fontSize="10.5">
         <textPath xlinkHref="#circle">
-          ● Web Developer ● Full-Stack
+          ● Frontend Developer ● Scalable Solutions
         </textPath>
       </text>
     </svg>

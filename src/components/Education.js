@@ -43,12 +43,12 @@ const Education = () => {
         />
 
         <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
-        <Details
-            type="BSc in Software Engineering"
-            time="2015-2019"
-            place="American International University - Bangladesh (AIUB)"
-            info="Completed relevant courses in Data Structures and Algorithms, Web Development, and Software Architecture and Design with a CGPA of 3.55."
-          />
+          <Details
+              type="BS, Software Engineering"
+              time="2015-2021"
+              place="American International University - Bangladesh"
+              info="Graduated with a CGPA of 3.55, completing senior-year projects in web development and gaining hands-on experience through practical internships."
+            />
 
           <Details
             type="Higher School Certificate"

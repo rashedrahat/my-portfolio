@@ -32,20 +32,17 @@ export default function Home() {
                         </div>
                         <div className="w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center">
                             <AnimatedText
-                                text="Turning Vision Into Reality With Code And Design."
-                                className="!text-6xl !text-left
-                xl:!text-5xl lg:!text-center lg:!text=6xl md:!text-5xl sm:!text-3xl
+                                text="Senior Software Engineer, Frontend Specialist - Creating Scalable and User-Centric Web Applications"
+                                className="!text-3xl !text-left
+                xl:!text-2xl lg:!text-center lg:!text=3xl md:!text-2xl sm:!text-lg
                 "
                             />
                             <p className="my-4 text-base font-medium md:text-sm sm:text-xs text-justify">
-                                As a skilled full-stack (front-end heavy) developer, I'm
-                                dedicated to turning ideas into innovative web applications.
-                                Explore my latest projects, showcasing my expertise in React.js
-                                and web development.
+                                I specialize in building high-performance web applications using React, Next.js, and TypeScript. With over 5 years of experience, I bring ideas to life through clean code and thoughtful design.
                             </p>
                             <div className="flex items-center self-start mt-2 lg:self-center">
                                 <Link
-                                    href="/Resume_of_RashedRahat.pdf"
+                                    href="/Md_Rashed_Ahmed_Resume.pdf"
                                     target={"_blank"}
                                     className="flex items-center bg-dark text-light p-2.5 px-6
                   rounded-lg text-lg font-semibold hover:bg-light hover:text-dark
