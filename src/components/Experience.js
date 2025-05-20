@@ -70,7 +70,7 @@ const Experience = () => {
                         time="Aug 2023 - Present"
                         type="Full-time"
                         address="Remote"
-                        work='Successfully designed and optimized seamless exam platforms handling 10,000+ concurrent users, achieving a 20-25% improvement in website load times for enhanced user retention. Mentored junior developers to elevate team productivity and ensure high-quality code delivery.'
+                        work='At Shikho, I’ve led front-end development for a mobile-first platform used by over 2.5 million students, focusing on scalable solutions built with React, Next.js, and TypeScript. I architected exam delivery modules supporting 15,000+ concurrent users, reduced load times by 20–25%, and integrated analytics tools that helped cut costs by over BDT 1 million annually. I also mentored junior developers and standardized our code review process. For these efforts, I was honored with the Learner First Award for advancing platform accessibility and UX quality.'
                     />
 
                     <Details
@@ -79,8 +79,8 @@ const Experience = () => {
                         companyLink="https://shikho.com"
                         time="Dec 2021 - Jul 2022"
                         type="Full-time"
-                        address="Banani, Dhaka"
-                        work="Effectively developed and maintained high-traffic websites serving over 1M quarterly unique users. Collaborated with UX designers to enhance engagement and conversion rates, while integrating third-party tools to streamline operations and save BDT 1 million annually."
+                        address="Banani, Dhaka (On-site)"
+                        work="As a mid-level front-end engineer at Shikho, I worked on the early development of the platform, building responsive interfaces and optimizing site performance for 1M+ unique quarterly users. I collaborated closely with designers to improve engagement and contributed to integrating third-party APIs for payments and analytics. This role helped sharpen my technical execution, cross-functional communication, and product understanding — setting the stage for my promotion to Senior Engineer."
                     />
 
                     <Details
@@ -110,7 +110,7 @@ const Experience = () => {
                         time="Mar 2021 - Nov 2021"
                         type="Full-time"
                         address="Banani, Dhaka"
-                        work="Optimized front-end performance with a mobile-first approach, boosting mobile traffic by 25%. Reduced code review discrepancies by 20% through adherence to web standards and collaborated with back-end developers to resolve issues effectively."
+                        work="At Misfit, I contributed to the development of responsive, mobile-first user interfaces using React and Tailwind CSS, which resulted in a 25% increase in mobile traffic. I helped establish standardized, reusable design patterns and improved code maintainability, leading to a 20% reduction in code review feedback. I also collaborated with back-end engineers to integrate RESTful APIs, contributed to Agile sprint planning, and worked across distributed teams to maintain continuous delivery workflows."
                     />
 
                     <Details
@@ -140,7 +140,7 @@ const Experience = () => {
                         time="Jun 2019 - Mar 2021"
                         type="Full-time"
                         address="Nikunja 2, Dhaka"
-                        work="Developed over 200 SQL queries in MySQL and MongoDB, contributing to the creation of 20+ websites using modern frameworks. Ensured software reliability through thorough testing and troubleshooting."
+                        work="As a junior developer, I worked on over 20 client websites using HTML, CSS, JavaScript, and PHP-based frameworks. I also wrote and optimized 200+ SQL and MongoDB queries for dashboards and reporting. My responsibilities included developing full-stack features, resolving cross-browser issues through functional testing, and working closely with QA and design teams to deliver production-ready software under Agile delivery models, using Git for version control."
                     />
                 </ul>
             </div>

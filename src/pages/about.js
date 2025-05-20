@@ -54,11 +54,15 @@ const about = () => {
                   Biography
                 </h2>
                 <p className="font-medium text-justify">
-                  Hi, I’m Rashed Rahat, a Senior Software Engineer specializing in Frontend Development 🖥️ with over 5+ years of experience delivering scalable, user-focused web solutions 🚀. I’ve worked with global teams to craft intuitive digital experiences for e-commerce 🛒 and educational technology 🎓 sectors.
+                  Hi, I’m Rashed Rahat — a Front-End Software Engineer with over 6 years of experience building scalable, user-focused web applications using React, Next.js, and TypeScript.
                 </p>
 
                 <p className="mt-4 font-medium text-justify">
-                  I’m passionate about bridging technology and user needs, building responsive applications with React, Next.js, and TypeScript 🛠 to deliver innovative solutions. Let’s create something impactful together! ✨
+                  I’ve worked with global teams to develop high-performance platforms for e-commerce, edtech, and other fast-moving industries. My recent work includes leading front-end architecture for platforms serving 2.5M+ users, optimizing real-time systems, and contributing to accessible, responsive UI design.
+                </p>
+
+                <p className="mt-4 font-medium text-justify">
+                  I’m passionate about bridging the gap between design and engineering, turning complex problems into elegant digital solutions. Let’s build something impactful together.
                 </p>
               </div>
 
@@ -106,7 +110,7 @@ bg-light p-8 dark:bg-dark dark:border-light xl:col-span-4 md:order-1 md:col-span
 
                 <div className="flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  <AnimatedNumbers value={5} />+
+                  <AnimatedNumbers value={6} />+
                 </span>
                   <h2
                       className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base

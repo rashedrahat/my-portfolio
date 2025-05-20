@@ -5,8 +5,8 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import project1 from "../../public/images/projects/tnhc.webp";
-import project2 from "../../public/images/projects/shopoth.png";
+import project1 from "../../public/images/projects/shikho.png";
+import project2 from "../../public/images/projects/shikho-exam.png";
 import project3 from "../../public/images/projects/bohubrihi.jpg";
 import project4 from "../../public/images/projects/valkyrie.png";
 import project5 from "../../public/images/projects/shikho.png";
@@ -164,49 +164,39 @@ const projects = () => {
             <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
               <div className="col-span-12">
                 <FeaturedProject
-                    type="Featured Project"
-                    title="The New Health Club"
-                    summary="A feature-rich The New Health Club website using React.js, Tailwind CSS and Context API. Re-introducing psychedelics into society. A global psychedelic community and spaces for transformation."
+                    type="Online Learning Platform"
+                    title="Shikho"
+                    summary="Built core front-end features using React, Next.js, and TypeScript for Bangladesh’s largest digital education platform. Served 2.5M+ users and led architecture for exam delivery and cross-platform UI."
                     img={project1}
-                    link="https://www.thenewhealthclub.de"
+                    link="https://shikho.com"
                 />
               </div>
               <div className="col-span-6 sm:col-span-12">
                 <Project
-                    type="E-commerce Website"
-                    title="Shopoth"
-                    summary="Trusted online shopping experience in Bangladesh from your local outlets anytime at fair price. Developed using Next.js, Tailwind CSS and Redux."
+                    type="Real-Time Exam System"
+                    title="Shikho Exam Portal"
+                    summary="Architected and implemented the real-time exam module for Shikho’s learning platform, enabling seamless MCQ+CQ test experiences for 15,000+ concurrent users. Developed intuitive, responsive UI with React, Next.js, and TypeScript, optimized for low latency and high engagement. The exam interface supports live question navigation, auto-submit timer, answer validation, and error handling, designed specifically for mobile-first access by high school students across Bangladesh."
                     img={project2}
-                    link="https://shopoth.com"
+                    link="https://app.shikho.com"
                 />
               </div>
               <div className="col-span-6 sm:col-span-12">
                 <Project
-                    type="E-learning Website"
+                    type="Career Skills Platform"
                     title="Bohubrihi"
                     img={project3}
-                    summary="Prepare yourself for a job or freelancing. Developed using Next.js, SASS, Ant Design and Context API."
+                    summary="Contributed to UI redesign and performance optimization for a self-learning platform offering training in web development, product management, and job readiness skills."
                     link="https://bohubrihi.com"
                 />
               </div>
 
-              <div className="col-span-12">
-                <FeaturedProject
+              <div className="col-span-6 sm:col-span-12">
+                <Project
                     type="Portfolio Website"
                     title="Valkyrie IT"
                     summary="An enterprise portfolio developed using Next.js and Tailwind CSS. It has unique design and it is mobile responsive."
                     img={project4}
                     link="https://www.valkyrie-it.com"
-                />
-              </div>
-
-              <div className="col-span-6 sm:col-span-12">
-                <Project
-                    type="E-learning Website"
-                    img={project5}
-                    title="Shikho"
-                    link="https://shikho.com"
-                    summary="A feature-rich website Shikho using Next.js, Tailwind CSS and Styled-components. Shikho on a mission to revolutionise the way Bangladesh learns today and democratise access to a high quality education."
                 />
               </div>
               <div className="col-span-6 sm:col-span-12">
