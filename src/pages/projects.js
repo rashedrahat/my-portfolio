@@ -8,9 +8,8 @@ import React from "react";
 import project1 from "../../public/images/projects/shikho.png";
 import project2 from "../../public/images/projects/shikho-exam.png";
 import project3 from "../../public/images/projects/bohubrihi.jpg";
-import project4 from "../../public/images/projects/valkyrie.png";
-import project5 from "../../public/images/projects/shikho.png";
-import project6 from "../../public/images/projects/fb-insta-clone.png";
+import project4 from "../../public/images/projects/shikho-e-shop.png";
+import project5 from "../../public/images/projects/shikho-ai.png";
 import { motion } from "framer-motion";
 import TransitionEffect from "@/components/TransitionEffect";
 
@@ -166,7 +165,7 @@ const projects = () => {
                 <FeaturedProject
                     type="Online Learning Platform"
                     title="Shikho"
-                    summary="Built core front-end features using React, Next.js, and TypeScript for Bangladesh’s largest digital education platform. Served 2.5M+ users and led architecture for exam delivery and cross-platform UI."
+                    summary="Built and maintained the core front-end using React, Next.js and TypeScript for Bangladesh’s largest digital education platform. Served 2.5M+ users and led architecture for exam delivery, cross-platform UI and 25% performance improvement."
                     img={project1}
                     link="https://shikho.com"
                 />
@@ -175,9 +174,28 @@ const projects = () => {
                 <Project
                     type="Real-Time Exam System"
                     title="Shikho Exam Portal"
-                    summary="Architected and implemented the real-time exam module for Shikho’s learning platform, enabling seamless MCQ+CQ test experiences for 15,000+ concurrent users. Developed intuitive, responsive UI with React, Next.js, and TypeScript, optimized for low latency and high engagement. The exam interface supports live question navigation, auto-submit timer, answer validation, and error handling, designed specifically for mobile-first access by high school students across Bangladesh."
+                    summary="Architected and implemented the real-time exam module enabling MCQ + CQ sessions for 15K+ concurrent users. Designed an optimized React/Next.js UI with auto-submit timers, question navigation and error validation, delivering a low-latency, mobile-first experience for students nationwide."
                     img={project2}
                     link="https://app.shikho.com"
+                />
+              </div>
+              <div className="col-span-6 sm:col-span-12">
+                <Project
+                    type="AI Learning Assistant"
+                    img={project5}
+                    title="Shikho AI"
+                    summary="Led front-end for Shikho’s AI assistant that generates curriculum-aligned answers in Bangla. Built chat UX, math rendering (Markdown / LaTeX), and guardrails with React, Next.js and TypeScript; collaborated with AI and backend teams on response latency and safety."
+                    link="https://ai.shikho.com"
+                />
+              </div>
+
+              <div className="col-span-6 sm:col-span-12">
+                <Project
+                    type="eCommerce"
+                    title="Shikho E-Shop"
+                    summary="Developed a responsive storefront for courses, T-shirts, PDFs and printed books. Implemented search, filters, cart and checkout flows with secure digital delivery; optimized images and bundle size to enhance mobile performance and UX."
+                    img={project4}
+                    link="https://shop.shikho.com"
                 />
               </div>
               <div className="col-span-6 sm:col-span-12">
@@ -185,28 +203,8 @@ const projects = () => {
                     type="Career Skills Platform"
                     title="Bohubrihi"
                     img={project3}
-                    summary="Contributed to UI redesign and performance optimization for a self-learning platform offering training in web development, product management, and job readiness skills."
+                    summary="Contributed to UI redesign and front-end optimization for a self-learning platform offering career and technical courses. Improved page load speed and component consistency across modules in React and Next.js."
                     link="https://bohubrihi.com"
-                />
-              </div>
-
-              <div className="col-span-6 sm:col-span-12">
-                <Project
-                    type="Portfolio Website"
-                    title="Valkyrie IT"
-                    summary="An enterprise portfolio developed using Next.js and Tailwind CSS. It has unique design and it is mobile responsive."
-                    img={project4}
-                    link="https://www.valkyrie-it.com"
-                />
-              </div>
-              <div className="col-span-6 sm:col-span-12">
-                <Project
-                    type="Social Website"
-                    img={project6}
-                    title="Facebook Instagram"
-                    summary="Clone of Facebook and Instagram using React.js and Tailwind CSS."
-                    link="https://tier5-reactjs-task.vercel.app"
-                    github="https://github.com/rashedrahat/tier5-reactjs-task"
                 />
               </div>
             </div>

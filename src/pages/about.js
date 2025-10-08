@@ -54,15 +54,16 @@ const about = () => {
                   Biography
                 </h2>
                 <p className="font-medium text-justify">
-                  Hi, I’m Rashed Rahat — a Front-End Software Engineer with over 6 years of experience building scalable, user-focused web applications using React, Next.js, and TypeScript.
+                  Hi, I’m MD Rashed Ahmed (Rahat) — a Front-End Software Engineer with over 6 years of experience building fast, scalable, and user-centric web applications using React, Next.js, and TypeScript.
                 </p>
 
                 <p className="mt-4 font-medium text-justify">
-                  I’ve worked with global teams to develop high-performance platforms for e-commerce, edtech, and other fast-moving industries. My recent work includes leading front-end architecture for platforms serving 2.5M+ users, optimizing real-time systems, and contributing to accessible, responsive UI design.
+                  At Shikho, I led front-end development for products serving 2.5M+ learners, including the real-time exam portal (15K+ concurrent users) and the AI-powered Shikho AI assistant. My work focused on performance optimization (+25%), accessibility, and creating responsive, engaging UIs that scale.
                 </p>
 
                 <p className="mt-4 font-medium text-justify">
-                  I’m passionate about bridging the gap between design and engineering, turning complex problems into elegant digital solutions. Let’s build something impactful together.
+                  Beyond code, I’m passionate about bridging design and engineering — translating complex ideas into elegant, accessible digital experiences.
+                  Currently based in Sydney, I’m eager to contribute my front-end expertise to Australian teams building the next generation of AI-driven and user-focused web platforms.
                 </p>
               </div>
 

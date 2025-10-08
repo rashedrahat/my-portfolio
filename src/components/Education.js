@@ -47,7 +47,9 @@ const Education = () => {
               type="BS, Software Engineering"
               time="2015-2021"
               place="American International University - Bangladesh"
-              info="Graduated in 2021 with a Bachelor of Science in Software Engineering from the American International University – Bangladesh (AIUB), earning a CGPA of 3.55. My senior-year projects focused on full-stack web development using technologies like React, Node.js, and MongoDB. I gained hands-on experience through internship-based coursework, collaborating with software firms to build practical applications. My academic focus included Software Architecture, Agile Development, Web Engineering, and Human-Computer Interaction (HCI)."
+              info="Graduated in 2021 with a B.Sc. in Software Engineering from AIUB (CGPA 3.55).
+Focused on full-stack web development using React, Node.js, and MongoDB, gaining hands-on experience through internship projects with software firms.
+Key areas of study included Software Architecture, Agile Development, Web Engineering, and HCI."
             />
 
           <Details

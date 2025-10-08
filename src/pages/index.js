@@ -32,14 +32,13 @@ export default function Home() {
                         </div>
                         <div className="w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center">
                             <AnimatedText
-                                text="Front-End Software Engineer – Building Scalable, Performant, and Human-Centered Web Applications"
+                                text="Front-End Software Engineer — Creating Scalable, Performant & Human-Centered Web Experiences"
                                 className="!text-3xl !text-left
                 xl:!text-2xl lg:!text-center lg:!text=3xl md:!text-2xl sm:!text-lg
                 "
                             />
                             <p className="my-4 text-base font-medium md:text-sm sm:text-xs text-justify">
-                                I specialize in crafting accessible, high-performance front-end apps using React, Next.js, and TypeScript.
-                                With 6+ years of experience, I bring ideas to life through clean code, responsive design, and attention to detail.
+                                I craft accessible, high-performance applications with React, Next.js, and TypeScript. With over six years of experience across EdTech, SaaS, and eCommerce, I focus on turning complex ideas into intuitive, fast, and visually engaging digital products.
                             </p>
                             <div className="flex items-center self-start mt-2 lg:self-center">
                                 <Link
