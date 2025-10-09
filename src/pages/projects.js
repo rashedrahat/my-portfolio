@@ -157,7 +157,12 @@ const projects = () => {
           <Layout className="pt-16">
             <AnimatedText
                 text="Imagination Trumps Knowledge!"
-                className="mb-16 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
+                className="mb-4 lg:!text-7xl sm:mb-2 sm:!text-6xl xs:!text-4xl"
+            />
+
+            <AnimatedText
+                text="Selected Projects 👇 Demonstrating Large-Scale Front-End Engineering, AI Integration, and High-Performance Product Delivery"
+                className="mb-16 sm:mb-8 text-base font-medium md:text-sm sm:text-xs text-center"
             />
 
             <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
@@ -165,7 +170,7 @@ const projects = () => {
                 <FeaturedProject
                     type="Online Learning Platform"
                     title="Shikho"
-                    summary="Built and maintained the core front-end using React, Next.js and TypeScript for Bangladesh’s largest digital education platform. Served 2.5M+ users and led architecture for exam delivery, cross-platform UI and 25% performance improvement."
+                    summary="Built and maintained the core front-end using React, Next.js, and TypeScript for Bangladesh’s largest digital learning platform. Served 2.5M+ users and led front-end architecture for exam delivery, cross-platform UI, and 25% performance improvement."
                     img={project1}
                     link="https://shikho.com"
                 />
@@ -174,7 +179,7 @@ const projects = () => {
                 <Project
                     type="Real-Time Exam System"
                     title="Shikho Exam Portal"
-                    summary="Architected and implemented the real-time exam module enabling MCQ + CQ sessions for 15K+ concurrent users. Designed an optimized React/Next.js UI with auto-submit timers, question navigation and error validation, delivering a low-latency, mobile-first experience for students nationwide."
+                    summary="Architected and implemented a real-time exam platform supporting MCQ + CQ sessions for 15K+ concurrent users. Designed an optimized React/Next.js UI with live timing, auto-submit, and validation — delivering a low-latency, mobile-first experience nationwide."
                     img={project2}
                     link="https://app.shikho.com"
                 />
@@ -184,7 +189,7 @@ const projects = () => {
                     type="AI Learning Assistant"
                     img={project5}
                     title="Shikho AI"
-                    summary="Led front-end for Shikho’s AI assistant that generates curriculum-aligned answers in Bangla. Built chat UX, math rendering (Markdown / LaTeX), and guardrails with React, Next.js and TypeScript; collaborated with AI and backend teams on response latency and safety."
+                    summary="Led front-end development for Shikho AI, an NLP-powered assistant that generates curriculum-aligned answers in Bangla. Built chat UX, math rendering (Markdown/LaTeX), and guardrails with React and TypeScript; collaborated with AI and backend teams to enhance response speed and reliability."
                     link="https://ai.shikho.com"
                 />
               </div>
@@ -193,7 +198,7 @@ const projects = () => {
                 <Project
                     type="eCommerce"
                     title="Shikho E-Shop"
-                    summary="Developed a responsive storefront for courses, T-shirts, PDFs and printed books. Implemented search, filters, cart and checkout flows with secure digital delivery; optimized images and bundle size to enhance mobile performance and UX."
+                    summary="Developed a responsive storefront for courses, T-shirts, PDFs, and books using React and Tailwind CSS. Implemented filters, cart logic, and secure checkout; optimized media and bundle sizes to improve mobile performance and UX"
                     img={project4}
                     link="https://shop.shikho.com"
                 />

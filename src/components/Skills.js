@@ -39,6 +39,7 @@ const Skills = () => {
         </motion.div>
 
         <Skill name="TypeScript" x="-20vw" y="2vw" />
+        <Skill name="Python" x="-30vw" y="10vw" />
         <Skill name="CSS" x="-5vw" y="-10vw" />
         <Skill name="JavaScript" x="20vw" y="6vw" />
         <Skill name="ExpressJS" x="0vw" y="14vw" />

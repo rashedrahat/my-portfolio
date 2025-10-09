@@ -53,17 +53,23 @@ const about = () => {
                 <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">
                   Biography
                 </h2>
-                <p className="font-medium text-justify">
-                  Hi, I’m MD Rashed Ahmed (Rahat) — a Front-End Software Engineer with over 6 years of experience building fast, scalable, and user-centric web applications using React, Next.js, and TypeScript.
+                <p className="font-bold">
+                  Hi, I’m Rashed — Front-End Engineer & Problem Solver.
+                </p>
+                <p className="mt-4 font-medium text-justify">
+                  I’m MD Rashed Ahmed (Rahat) — a Front-End Software Engineer with over 6 years of experience building fast, scalable, and user-centric web applications using React, Next.js, and TypeScript.
+                </p>
+                <p className="mt-4 font-medium text-justify">
+                  I love crafting interfaces that don’t just work — they feel right. My focus is on building high-performance, accessible, and elegant experiences that make complex systems effortless for users.
                 </p>
 
                 <p className="mt-4 font-medium text-justify">
-                  At Shikho, I led front-end development for products serving 2.5M+ learners, including the real-time exam portal (15K+ concurrent users) and the AI-powered Shikho AI assistant. My work focused on performance optimization (+25%), accessibility, and creating responsive, engaging UIs that scale.
+                  For me, front-end engineering is where logic meets creativity — the bridge between human experience and technical precision.
+                  I’m passionate about turning complex problems into simple, beautiful solutions, writing clean code, and experimenting with design systems that bring products to life.
                 </p>
 
                 <p className="mt-4 font-medium text-justify">
-                  Beyond code, I’m passionate about bridging design and engineering — translating complex ideas into elegant, accessible digital experiences.
-                  Currently based in Sydney, I’m eager to contribute my front-end expertise to Australian teams building the next generation of AI-driven and user-focused web platforms.
+                  Currently based in Sydney, I’m exploring opportunities with teams that value innovation, performance, and meaningful digital experiences — especially where AI and front-end engineering intersect.
                 </p>
               </div>
 

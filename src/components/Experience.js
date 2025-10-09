@@ -70,7 +70,7 @@ const Experience = () => {
                         time="Aug 2023 - Jun 2025"
                         type="Full-time"
                         address="Remote (Dhaka → Sydney)"
-                        work='Led front-end development for Shikho’s learning platform serving over 2.5M users. Built real-time exam modules for 15K+ concurrent sessions, improved performance by 25%, and developed Shikho AI, an AI-powered Bangla learning assistant. Mentored juniors and earned the Learner First Award (2023) for UX and accessibility.'
+                        work='Led front-end development for Shikho’s national learning platform serving 2.5M+ users. Built real-time exam systems (15K+ concurrent sessions), developed AI-powered tools, and improved platform performance by 25%. Mentored juniors and earned recognition for excellence in UX and accessibility.'
                     />
 
                     <Details
@@ -80,7 +80,7 @@ const Experience = () => {
                         time="Dec 2021 - Jul 2022"
                         type="Full-time"
                         address="Banani, Dhaka (On-site)"
-                        work="Joined Shikho’s front-end team during the platform’s early growth stage. Built responsive interfaces and optimized performance for over 1M users. Collaborated with designers to improve engagement, integrated third-party APIs, and contributed to the foundation that later supported large-scale expansion."
+                        work="Contributed to Shikho’s early product expansion, optimizing performance for 1M+ users. Built modular, responsive interfaces and collaborated closely with design teams to refine UX and component libraries."
                     />
 
                     <Details
@@ -140,7 +140,7 @@ const Experience = () => {
                         time="Jun 2019 - Mar 2021"
                         type="Full-time"
                         address="Nikunja 2, Dhaka"
-                        work="Developed and maintained 20 + websites using HTML, CSS, JS and PHP frameworks, integrating databases and APIs while ensuring cross-browser stability."
+                        work="Developed and maintained 20+ websites using HTML, CSS, JavaScript, and PHP-based frameworks. Contributed to Python/Django back-end modules and optimized cross-browser performance."
                     />
                 </ul>
             </div>
