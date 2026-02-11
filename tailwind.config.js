@@ -17,48 +17,50 @@ module.exports = {
         body: ['var(--font-body)', ...fontFamily.sans],
       },
       colors:{
-        dark: "#0E1116",
-        light: "#F7F3EE",
-        primary: "#FF6B4A",
-        primaryDark: "#5FE3C0",
-        ink: "#0E1116",
-        paper: "#F7F3EE",
-        slate: "#9B9AA1",
-        cloud: "#EAE5DE",
+        dark: "#0B0F1A",
+        light: "#F0EFE9",
+        primary: "#FF8A3D",
+        primaryDark: "#63E6BE",
+        ink: "#0B0F1A",
+        paper: "#F0EFE9",
+        slate: "#8E8A86",
+        cloud: "#E3DDD3",
+        sapphire: "#4C7BFF",
+        moss: "#2D6A4F",
       },
       animation: {
         'spin-slow': 'spin 8s linear infinite',
       },
       backgroundImage:{
         circularLight:
-        "repeating-radial-gradient(rgba(14,17,22,0.25) 2px,#F7F3EE 6px,#F7F3EE 100px)",
+        "repeating-radial-gradient(rgba(11,15,26,0.18) 2px,#F0EFE9 6px,#F0EFE9 100px)",
 
     circularDark:
-        "repeating-radial-gradient(rgba(255,255,255,0.5) 2px,#0E1116 8px,#0E1116 100px)",
+        "repeating-radial-gradient(rgba(255,255,255,0.5) 2px,#0B0F1A 8px,#0B0F1A 100px)",
 
     circularLightLg:
-        "repeating-radial-gradient(rgba(14,17,22,0.25) 2px,#F7F3EE 6px,#F7F3EE 80px)",
+        "repeating-radial-gradient(rgba(11,15,26,0.18) 2px,#F0EFE9 6px,#F0EFE9 80px)",
 
     circularDarkLg:
-        "repeating-radial-gradient(rgba(255,255,255,0.5) 2px,#0E1116 8px,#0E1116 80px)",
+        "repeating-radial-gradient(rgba(255,255,255,0.5) 2px,#0B0F1A 8px,#0B0F1A 80px)",
 
     circularLightMd:
-        "repeating-radial-gradient(rgba(14,17,22,0.25) 2px,#F7F3EE 6px,#F7F3EE 60px)",
+        "repeating-radial-gradient(rgba(11,15,26,0.18) 2px,#F0EFE9 6px,#F0EFE9 60px)",
 
     circularDarkMd:
-        "repeating-radial-gradient(rgba(255,255,255,0.5) 2px,#0E1116 6px,#0E1116 60px)",
+        "repeating-radial-gradient(rgba(255,255,255,0.5) 2px,#0B0F1A 6px,#0B0F1A 60px)",
 
     circularLightSm:
-        "repeating-radial-gradient(rgba(14,17,22,0.25) 2px,#F7F3EE 6px,#F7F3EE 40px)",
+        "repeating-radial-gradient(rgba(11,15,26,0.18) 2px,#F0EFE9 6px,#F0EFE9 40px)",
 
     circularDarkSm:
-        "repeating-radial-gradient(rgba(255,255,255,0.5) 2px,#0E1116 4px,#0E1116 40px)",
+        "repeating-radial-gradient(rgba(255,255,255,0.5) 2px,#0B0F1A 4px,#0B0F1A 40px)",
 
       },
       boxShadow: {
-        "3xl": "0 20px 50px -20px rgba(14,17,22, 0.35)",
-        "soft": "0 20px 70px -30px rgba(14,17,22, 0.25)",
-        "glow": "0 0 40px rgba(255,107,74, 0.25)",
+        "3xl": "0 24px 60px -20px rgba(11,15,26, 0.4)",
+        "soft": "0 30px 80px -40px rgba(11,15,26, 0.3)",
+        "glow": "0 0 45px rgba(255,138,61, 0.3)",
       },
     },
     screens: {

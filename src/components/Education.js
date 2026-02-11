@@ -33,10 +33,22 @@ const Education = () => {
     offset: ["start end", "center start"],
   });
   return (
-    <div className="my-32">
-      <h2 className="font-bold text-6xl mb-12 w-full text-center md:text-4xl">Education</h2>
+    <div className="my-24">
+      <div className="grid grid-cols-12 gap-10 items-end mb-10">
+        <div className="col-span-4 lg:col-span-12">
+          <p className="text-xs uppercase tracking-[0.35em] text-dark/60 dark:text-light/60">
+            Foundations
+          </p>
+          <h2 className="font-bold text-5xl mt-4 md:text-4xl">Education</h2>
+        </div>
+        <div className="col-span-8 lg:col-span-12">
+          <p className="text-base text-dark/70 dark:text-light/70">
+            Academic grounding in software engineering, web systems, and user-centered design.
+          </p>
+        </div>
+      </div>
 
-      <div ref={ref} className="w-[80%] mx-auto relative lg:w-[95%] md:w-full">
+      <div ref={ref} className="w-[82%] mx-auto relative lg:w-[95%] md:w-full">
         <motion.div
           style={{ scaleY: scrollYProgress }}
           className="absolute left-9 top-0 w-[3px] h-full bg-dark/20 origin-top dark:bg-primaryDark/60

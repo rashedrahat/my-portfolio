@@ -77,7 +77,7 @@ const NavBar = () => {
     <header
       className="sticky top-0 w-full px-32 py-6 font-medium flex items-center justify-between
     dark:text-light z-40 lg:px-16 md:px-12 sm:px-8
-    bg-light/80 dark:bg-dark/70 backdrop-blur-xl border-b border-dark/10 dark:border-light/10
+    bg-light/70 dark:bg-dark/60 backdrop-blur-xl
     "
     >
       <button
@@ -102,7 +102,7 @@ const NavBar = () => {
       </button>
 
       <div className="w-full flex justify-between items-center lg:hidden">
-        <nav className="flex items-center justify-center gap-8">
+        <nav className="flex items-center justify-center gap-10">
           <CustomLink href="/" title="Home" className="" />
           <CustomLink href="/about" title="About" className="" />
           <CustomLink href="/projects" title="Projects" className="" />
