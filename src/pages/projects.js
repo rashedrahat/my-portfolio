@@ -18,19 +18,14 @@ const FramerImage = motion(Image);
 const FeaturedProject = ({ type, title, summary, img, link, github }) => {
   return (
       <article
-          className="w-full flex items-center justify-between relative  rounded-br-2xl
-        rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12 dark:bg-dark dark:border-light
-        lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4"
+          className="w-full flex items-center justify-between relative rounded-[2rem]
+        border border-solid border-dark/10 bg-light/80 shadow-soft p-10 dark:bg-dark/60 dark:border-light/10
+        lg:flex-col lg:p-8 xs:rounded-2xl xs:p-4"
       >
-        <div
-            className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2.5rem] bg-dark dark:bg-light
-    rounded-br-3xl xs:-right-2 sm:h-[102%] xs:w-full xs:rounded-[1.5rem]
-    "
-        />
         <Link
             href={link}
             target="_blank"
-            className="w-1/2 cursor-pointer overflow-hidden rounded-lg lg:w-full"
+            className="w-1/2 cursor-pointer overflow-hidden rounded-2xl lg:w-full"
         >
           <FramerImage
               src={img}
@@ -46,7 +41,7 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
         </Link>
 
         <div className="w-1/2 flex flex-col items-start justify-between pl-6 lg:w-full lg:pl-0 lg:pt-6">
-        <span className="text-primary font-medium text-xl dark:text-primaryDark xs:text-base">
+        <span className="text-primary font-semibold text-sm uppercase tracking-[0.2em] dark:text-primaryDark xs:text-xs">
           {type}
         </span>
           <Link
@@ -58,7 +53,7 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
               {title}
             </h2>
           </Link>
-          <p className="my-2 font-medium text-dark dark:text-light sm:text-sm text-justify">
+          <p className="my-2 font-medium text-dark/80 dark:text-light/80 sm:text-sm text-justify">
             {summary}
           </p>
           <div className="mt-2 flex items-center">
@@ -71,9 +66,9 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
             <Link
                 href={link}
                 target="_blank"
-                className="rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold
-            dark:bg-light dark:text-dark
-            sm:px-4 sm:text-base
+                className="rounded-full bg-dark text-light px-6 py-2 text-base font-semibold
+            dark:bg-light dark:text-dark hover:bg-primary hover:text-dark dark:hover:bg-primaryDark transition-colors
+            sm:px-4 sm:text-sm
             "
             >
               Visit Project
@@ -88,18 +83,13 @@ const Project = ({ title, type, img, link, github, summary }) => {
   return (
       <article
           className="w-full flex flex-col items-center justify-center rounded-2xl
-    border border-solid border-dark bg-light p-6 relative dark:bg-dark dark:border-light xs:p-4
+    border border-solid border-dark/10 bg-light/80 p-6 relative dark:bg-dark/60 dark:border-light/10 xs:p-4 shadow-soft
     "
       >
-        <div
-            className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[2rem] bg-dark
-    rounded-br-3xl dark:bg-light md:-right-2 md:w-[101%] xs:h-[102%] xs:rounded-[1.5rem]
-    "
-        />
         <Link
             href={link}
             target="_blank"
-            className="w-full cursor-pointer overflow-hidden rounded-lg"
+            className="w-full cursor-pointer overflow-hidden rounded-2xl"
         >
           <FramerImage
               src={img}
@@ -111,7 +101,7 @@ const Project = ({ title, type, img, link, github, summary }) => {
         </Link>
 
         <div className="w-full flex flex-col items-start justify-between mt-4">
-        <span className="text-primary font-medium text-xl dark:text-primaryDark lg:text-lg md:text-base">
+        <span className="text-primary font-semibold text-sm uppercase tracking-[0.2em] dark:text-primaryDark lg:text-xs">
           {type}
         </span>
           <Link
@@ -123,7 +113,7 @@ const Project = ({ title, type, img, link, github, summary }) => {
               {title}
             </h2>
           </Link>
-          <p className="my-2 font-medium text-dark dark:text-light sm:text-sm text-justify">
+          <p className="my-2 font-medium text-dark/80 dark:text-light/80 sm:text-sm text-justify">
             {summary}
           </p>
 
@@ -131,7 +121,7 @@ const Project = ({ title, type, img, link, github, summary }) => {
             <Link
                 href={link}
                 target="_blank"
-                className="text-lg font-semibold underline md:text-base"
+                className="text-base font-semibold underline decoration-primary/70 underline-offset-4 md:text-sm"
             >
               Visit
             </Link>
@@ -156,12 +146,12 @@ const projects = () => {
         <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light">
           <Layout className="pt-16">
             <AnimatedText
-                text="Imagination Trumps Knowledge!"
-                className="mb-4 lg:!text-7xl sm:mb-2 sm:!text-6xl xs:!text-4xl"
+                text="Selected work, built for scale and speed."
+                className="mb-4 lg:!text-6xl sm:mb-2 sm:!text-5xl xs:!text-4xl"
             />
 
             <AnimatedText
-                text="Selected Projects 👇 Demonstrating Large-Scale Front-End Engineering, AI Integration, and High-Performance Product Delivery"
+                text="Large-scale front-end engineering, AI integration, and performance-driven product delivery."
                 className="mb-16 sm:mb-8 text-base font-medium md:text-sm sm:text-xs text-center"
             />
 

@@ -7,19 +7,20 @@ const Details = ({ type, time, place, info }) => {
   return (
     <li
       ref={ref}
-      className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between md:w-[80%]"
+      className="my-8 first:mt-0 last:mb-0 w-[70%] mx-auto flex flex-col items-center justify-between md:w-[90%]"
     >
       <LiIcon reference={ref} />
       <motion.div
         initial={{ y: 50 }}
         whileInView={{ y: 0 }}
         transition={{ duration: 0.5, type: "spring" }}
+        className="w-full rounded-2xl border border-dark/10 dark:border-light/10 bg-light/80 dark:bg-dark/60 p-6 shadow-soft"
       >
-        <h3 className="capitalize font-bold text-2xl sm:text-xl xs:text-lg">{type}</h3>
-        <span className="capitalize font-medium text-dark/75 dark:text-light/75 xs:text-sm">
+        <h3 className="font-bold text-2xl sm:text-xl xs:text-lg">{type}</h3>
+        <span className="font-medium text-dark/70 dark:text-light/70 xs:text-sm">
           {time} | {place}
         </span>
-        <p className="font-medium w-full md:text-sm text-justify">{info}</p>
+        <p className="mt-3 font-medium w-full md:text-sm text-justify text-dark/80 dark:text-light/80">{info}</p>
       </motion.div>
     </li>
   );
@@ -32,39 +33,23 @@ const Education = () => {
     offset: ["start end", "center start"],
   });
   return (
-    <div className="my-64">
-      <h2 className="font-bold text-8xl mb-32 w-full text-center md:text-6xl xs:text-4xl md:mb-16">Education</h2>
+    <div className="my-32">
+      <h2 className="font-bold text-6xl mb-12 w-full text-center md:text-4xl">Education</h2>
 
-      <div ref={ref} className="w-[75%] mx-auto relative lg:w-[90%] md:w-full">
+      <div ref={ref} className="w-[80%] mx-auto relative lg:w-[95%] md:w-full">
         <motion.div
           style={{ scaleY: scrollYProgress }}
-          className="absolute left-9 top-0 w-[4px] h-full bg-dark origin-top dark:bg-light
-          md:w-[2px] md:left-[30px] xs:left-[20px] dark:bg-primaryDark dark:shadow-3xl"
+          className="absolute left-9 top-0 w-[3px] h-full bg-dark/20 origin-top dark:bg-primaryDark/60
+          md:w-[2px] md:left-[30px] xs:left-[20px]"
         />
 
         <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
           <Details
-              type="BS, Software Engineering"
+              type="Bachelor of Science in Software Engineering"
               time="2015-2021"
-              place="American International University - Bangladesh"
-              info="Graduated in 2021 with a B.Sc. in Software Engineering from AIUB (CGPA 3.55).
-Focused on full-stack web development using React, Node.js, and MongoDB, gaining hands-on experience through internship projects with software firms.
-Key areas of study included Software Architecture, Agile Development, Web Engineering, and HCI."
+              place="American International University - Bangladesh (AIUB)"
+              info="CGPA: 3.55 / 4.00. Focused on software engineering fundamentals, web engineering, and HCI with practical project experience in full-stack development."
             />
-
-          <Details
-            type="Higher School Certificate"
-            time="2011-2013"
-            place="Noakhali Govt. College"
-            info="Completed relevant courses in Mathematics, Science, Electives, and Practical Skills with a GPA of 4.70."
-          />
-
-          <Details
-            type="Secondary School Certificate"
-            time="2009-2011"
-            place="Noakhali Zilla School"
-            info="Completed relevant courses in Mathematics, Science, Physical Education, Electives, and Life Skills with a GPA of 4.94."
-          />
         </ul>
       </div>
     </div>

@@ -1,59 +1,62 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const Skill = ({ name, x, y }) => {
-  return (
-    <motion.div
-      className="flex items-center justify-center rounded-full font-semibold bg-dark text-light
-              py-3 px-6 shadow-dark cursor-pointer absolute dark:text-dark dark:bg-light
-              lg:py-2 lg:px-4 md:text-sm md:py-1.5 md:px-3 xs:bg-transparent xs:dark:bg-transparent
-              xs:text-dark xs:dark:text-light xs:font-bold
-              "
-      whileHover={{ scale:1.05 }}
-      initial={{ x: 0, y: 0 }}
-      whileInView={{ x: x, y: y, transition: {duration: 1.5} }}
-      viewport={{ once: true }}
-    >
-      {name}
-    </motion.div>
-  );
-};
-
 const Skills = () => {
+  const skillGroups = [
+    {
+      title: "Frontend Engineering",
+      items: ["React", "Next.js", "TypeScript", "JavaScript (ES6+)", "HTML5", "CSS3"],
+    },
+    {
+      title: "Accessibility & UI Standards",
+      items: ["WCAG 2.1 AA", "ARIA roles", "Semantic HTML", "Keyboard navigation", "Screen readers"],
+    },
+    {
+      title: "State & APIs",
+      items: ["GraphQL", "REST APIs", "Axios", "WebSockets", "Context API", "Redux"],
+    },
+    {
+      title: "Testing & Quality",
+      items: ["Jest", "React Testing Library", "Unit testing", "Integration testing", "CI quality gates"],
+    },
+    {
+      title: "UI Systems & Design",
+      items: ["MUI", "Tailwind CSS", "Styled Components", "Storybook", "Design systems"],
+    },
+    {
+      title: "Performance & Delivery",
+      items: ["Code splitting", "Lazy loading", "Memoization", "Web Vitals", "CI/CD workflows"],
+    },
+  ];
+
   return (
-    <>
-      <h2 className="font-bold text-8xl mt-64 w-full text-center md:text-6xl md:mt-32">Skills</h2>
-      <div className="w-full h-screen relative flex items-center justify-center rounded-full bg-circularLight dark:bg-circularDark
-      lg:h-[80vh] sm:h-[60vh] xs:h-[50vh]
-      lg:bg-circularLightLg lg:dark:bg-circularDarkLg
-      md:bg-circularLightMd md:dark:bg-circularDarkMd
-      sm:bg-circularLightSm sm:dark:bg-circularDarkSm
-      ">
-        <motion.div
-          className="flex items-center justify-center rounded-full font-semibold bg-dark text-light
-              p-8 shadow-dark cursor-pointer dark:text-dark dark:bg-light lg:p-6 md:p-4 xs:text-xs xs:p-2
-              "
-          whileHover={{ scale: 1.05 }}
-        >
-          Web
-        </motion.div>
-
-        <Skill name="TypeScript" x="-20vw" y="2vw" />
-        <Skill name="Python" x="-30vw" y="10vw" />
-        <Skill name="CSS" x="-5vw" y="-10vw" />
-        <Skill name="JavaScript" x="20vw" y="6vw" />
-        <Skill name="ExpressJS" x="0vw" y="14vw" />
-        <Skill name="NextJS" x="-20vw" y="-15vw" />
-        <Skill name="ReactJS" x="15vw" y="-12vw" />
-        <Skill name="MongoDB" x="-35vw" y="-5vw" />
-        <Skill name="MySQL" x="32vw" y="-5vw" />
-        <Skill name="HTML" x="0vw" y="-20vw" />
-        <Skill name="NodeJS" x="-25vw" y="18vw" />
-        <Skill name="Tailwind CSS" x="28vw" y="16vw" />
-        <Skill name="Automation Testing" x="2vw" y="23vw" />
-
+    <section className="mt-32">
+      <h2 className="font-bold text-6xl mb-12 w-full text-center md:text-4xl">Skills</h2>
+      <div className="grid grid-cols-2 gap-6 lg:grid-cols-1">
+        {skillGroups.map((group, index) => (
+          <motion.div
+            key={group.title}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.05 }}
+            viewport={{ once: true }}
+            className="rounded-2xl border border-dark/10 dark:border-light/10 bg-light/80 dark:bg-dark/60 p-6 shadow-soft"
+          >
+            <h3 className="text-lg font-bold">{group.title}</h3>
+            <div className="mt-4 flex flex-wrap gap-2">
+              {group.items.map((item) => (
+                <span
+                  key={item}
+                  className="px-3 py-1 rounded-full text-sm bg-dark/5 dark:bg-light/10 text-dark/80 dark:text-light/80"
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
+          </motion.div>
+        ))}
       </div>
-    </>
+    </section>
   );
 };
 

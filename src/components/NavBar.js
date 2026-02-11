@@ -18,16 +18,16 @@ const CustomLink = ({ href, title, className = "" }) => {
   const router = useRouter();
 
   return (
-    <Link href={href} className={`${className} relative group`}>
+    <Link href={href} className={`${className} relative group text-sm tracking-wide uppercase`}>
       {title}
 
       <span
         className={`
-          h-[1px] inline-block  bg-dark
+          h-[2px] inline-block  bg-primary
           absolute left-0 -bottom-0.5
           group-hover:w-full transition-[width] ease duration-300
           ${router.asPath === href ? "w-full" : "w-0"}
-          dark:bg-light`}
+          dark:bg-primaryDark`}
       >
         &nbsp;
       </span>
@@ -46,14 +46,14 @@ const CustomMobileLink = ({ href, title, className = "", toggle }) => {
   return (
     <button
       href={href}
-      className={`${className} relative group text-light dark:text-dark my-2`}
+      className={`${className} relative group text-light dark:text-dark my-2 text-sm tracking-wide uppercase`}
       onClick={handleClick}
     >
       {title}
 
       <span
         className={`
-          h-[1px] inline-block  bg-light
+          h-[2px] inline-block  bg-light
           absolute left-0 -bottom-0.5
           group-hover:w-full transition-[width] ease duration-300
           ${router.asPath === href ? "w-full" : "w-0"}
@@ -75,8 +75,9 @@ const NavBar = () => {
 
   return (
     <header
-      className="w-full px-32 py-8 font-medium flex items-center justify-between
-    dark:text-light relative z-10 lg:px-16 md:px-12 sm:px-8
+      className="sticky top-0 w-full px-32 py-6 font-medium flex items-center justify-between
+    dark:text-light z-40 lg:px-16 md:px-12 sm:px-8
+    bg-light/80 dark:bg-dark/70 backdrop-blur-xl border-b border-dark/10 dark:border-light/10
     "
     >
       <button
@@ -101,10 +102,10 @@ const NavBar = () => {
       </button>
 
       <div className="w-full flex justify-between items-center lg:hidden">
-        <nav className="flex items-center justify-center">
-          <CustomLink href="/" title="Home" className="mr-4" />
-          <CustomLink href="/about" title="About" className="mx-4" />
-          <CustomLink href="/projects" title="Projects" className="mx-4" />
+        <nav className="flex items-center justify-center gap-8">
+          <CustomLink href="/" title="Home" className="" />
+          <CustomLink href="/about" title="About" className="" />
+          <CustomLink href="/projects" title="Projects" className="" />
         </nav>
 
         <nav className="flex items-center justify-center flex-wrap">
@@ -113,14 +114,14 @@ const NavBar = () => {
             target={"_blank"}
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
-            className="w-6 mr-3"
+            className="w-6 mr-3 text-dark/80 hover:text-dark dark:text-light/80 dark:hover:text-light transition-colors"
           >
             <StackOverflowIcon />
           </motion.a>
           <motion.a
             href="https://github.com/rashedrahat"
             target={"_blank"}
-            className="w-6 mx-3"
+            className="w-6 mx-3 text-dark/80 hover:text-dark dark:text-light/80 dark:hover:text-light transition-colors"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
           >
@@ -129,7 +130,7 @@ const NavBar = () => {
           <motion.a
             href="https://linkedin.com/in/rashedrahat"
             target={"_blank"}
-            className="w-6 mx-3"
+            className="w-6 mx-3 text-dark/80 hover:text-dark dark:text-light/80 dark:hover:text-light transition-colors"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
           >
@@ -138,7 +139,7 @@ const NavBar = () => {
 
           <button
             onClick={() => setMode(mode === "light" ? "dark" : "light")}
-            className={`w-6 h-6 ml-3 flex items-center justify-center rounded-full p-1 ease
+            className={`w-9 h-9 ml-3 flex items-center justify-center rounded-full p-1 ease
       ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}
       `}
           >
@@ -156,7 +157,7 @@ const NavBar = () => {
           initial={{ scale: 0, opacity: 0, x: "-50%", y: "-50%" }}
           animate={{ scale: 1, opacity: 1 }}
           className="min-w-[70vw] sm:min-w-[90vw] flex flex-col justify-between z-30 items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
-      bg-dark/90 dark:bg-light/75 rounded-lg backdrop-blur-md py-32
+      bg-dark/90 dark:bg-light/85 rounded-2xl backdrop-blur-xl py-24 shadow-soft
       "
         >
           <nav className="flex items-center flex-col justify-center">
@@ -186,7 +187,7 @@ const NavBar = () => {
               target={"_blank"}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
-              className="w-6 mr-3"
+              className="w-6 mr-3 text-light dark:text-dark"
             >
               <StackOverflowIcon />
             </motion.a>
@@ -202,7 +203,7 @@ const NavBar = () => {
             <motion.a
               href="https://linkedin.com/in/rashedrahat"
               target={"_blank"}
-              className="w-6 mx-3"
+              className="w-6 mx-3 text-light dark:text-dark"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
             >

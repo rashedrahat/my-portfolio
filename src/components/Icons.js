@@ -440,11 +440,11 @@ export const CircularText = ({ className, ...rest }) => (
         <path id="circle"
               d="
         M 50, 50
-        m -37, 0
-        a 37,37 0 1,1 74,0
-        a 37,37 0 1,1 -74,0"/>
+        m -32, 0
+        a 32,32 0 1,1 64,0
+        a 32,32 0 1,1 -64,0"/>
       </defs>
-      <text fontSize="10.5">
+      <text fontSize="9.5">
         <textPath xlinkHref="#circle">
           ● Frontend Developer ● Scalable Solutions
         </textPath>
@@ -472,4 +472,3 @@ export const LinkArrow = ({ className, ...rest }) => (
     />
   </svg>
 );
-
