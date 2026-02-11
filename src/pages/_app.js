@@ -2,16 +2,16 @@ import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
 import "@/styles/globals.css";
 import { AnimatePresence } from "framer-motion";
-import { Manrope, Sora } from "next/font/google";
+import { Fraunces, Plus_Jakarta_Sans } from "next/font/google";
 import Head from "next/head";
 import { useRouter } from "next/router";
 
-const sora = Sora({
+const fraunces = Fraunces({
   subsets: ["latin"],
   variable: "--font-display",
 });
 
-const manrope = Manrope({
+const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
   variable: "--font-body",
 });
@@ -28,7 +28,7 @@ export default function App({ Component, pageProps }) {
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       </Head>
       <main
-        className={`${sora.variable} ${manrope.variable} font-body bg-light dark:bg-dark w-full min-h-screen`}
+        className={`${fraunces.variable} ${jakarta.variable} font-body bg-light dark:bg-dark w-full min-h-screen`}
       >
         <NavBar />
         <AnimatePresence initial={false} mode="wait">

@@ -145,15 +145,22 @@ const projects = () => {
         <TransitionEffect />
         <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light">
           <Layout className="pt-16">
-            <AnimatedText
-                text="Selected work, built for scale and speed."
-                className="mb-4 lg:!text-6xl sm:mb-2 sm:!text-5xl xs:!text-4xl"
-            />
-
-            <AnimatedText
-                text="Large-scale front-end engineering, AI integration, and performance-driven product delivery."
-                className="mb-16 sm:mb-8 text-base font-medium md:text-sm sm:text-xs text-center"
-            />
+            <div className="grid grid-cols-12 gap-10 items-end mb-12">
+              <div className="col-span-6 lg:col-span-12">
+                <p className="text-xs uppercase tracking-[0.35em] text-dark/60 dark:text-light/60">
+                  Selected Work
+                </p>
+                <AnimatedText
+                    text="Products shipped with focus on scale, speed, and clarity."
+                    className="mt-4 !text-6xl !text-left lg:!text-5xl sm:!text-4xl xs:!text-3xl"
+                />
+              </div>
+              <div className="col-span-6 lg:col-span-12">
+                <p className="text-base text-dark/70 dark:text-light/70">
+                  Large-scale front-end engineering, AI integration, and performance-driven product delivery across education, fintech, and commerce.
+                </p>
+              </div>
+            </div>
 
             <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
               <div className="col-span-12">
