@@ -1,4 +1,3 @@
-import AnimatedText from "@/components/AnimatedText";
 import { GithubIcon } from "@/components/Icons";
 import Layout from "@/components/Layout";
 import Head from "next/head";
@@ -17,202 +16,214 @@ const FramerImage = motion(Image);
 
 const FeaturedProject = ({ type, title, summary, img, link, github }) => {
   return (
-      <article
-          className="w-full flex items-center justify-between relative rounded-[2rem]
-        border border-solid border-dark/10 bg-light/80 shadow-soft p-10 dark:bg-dark/60 dark:border-light/10
-        lg:flex-col lg:p-8 xs:rounded-2xl xs:p-4"
+    <motion.article
+      initial={{ opacity: 0, y: 32 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      className="w-full flex items-center justify-between relative rounded-[2rem]
+        glass-dark overflow-hidden
+        lg:flex-col xs:rounded-2xl"
+    >
+      {/* Image half */}
+      <Link
+        href={link}
+        target="_blank"
+        className="w-1/2 cursor-pointer overflow-hidden lg:w-full group"
       >
-        <Link
-            href={link}
-            target="_blank"
-            className="w-1/2 cursor-pointer overflow-hidden rounded-2xl lg:w-full"
-        >
-          <FramerImage
-              src={img}
-              alt={title}
-              className="w-full h-auto"
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.2 }}
-              priority
-              sizes="(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              50vw"
-          />
-        </Link>
+        <FramerImage
+          src={img}
+          alt={title}
+          className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
+          whileHover={{ scale: 1.03 }}
+          transition={{ duration: 0.4 }}
+          priority
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
+        />
+      </Link>
 
-        <div className="w-1/2 flex flex-col items-start justify-between pl-6 lg:w-full lg:pl-0 lg:pt-6">
-        <span className="text-primary font-semibold text-sm uppercase tracking-[0.2em] dark:text-primaryDark xs:text-xs">
+      {/* Content half */}
+      <div className="w-1/2 flex flex-col items-start justify-between p-10 lg:w-full lg:p-8 md:p-6 sm:p-5">
+        <span className="inline-block px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em]
+          text-electric border border-electric/30 rounded-full bg-electric/[0.08] mb-4">
           {type}
         </span>
-          <Link
-              href={link}
-              target="_blank"
-              className="hover:underline underline-offset-2"
-          >
-            <h2 className="my-2 w-full text-left text-4xl font-bold dark:text-light lg:text-3xl xs:text-2xl">
-              {title}
-            </h2>
-          </Link>
-          <p className="my-2 font-medium text-dark/80 dark:text-light/80 sm:text-sm text-justify">
-            {summary}
-          </p>
-          <div className="mt-2 flex items-center">
-            {github && (
-                <Link href={github} target="_blank" className="w-10 mr-4">
-                  {" "}
-                  <GithubIcon />
-                </Link>
-            )}
-            <Link
-                href={link}
-                target="_blank"
-                className="rounded-full bg-dark text-light px-6 py-2 text-base font-semibold
-            dark:bg-light dark:text-dark hover:bg-primary hover:text-dark dark:hover:bg-primaryDark transition-colors
-            sm:px-4 sm:text-sm
-            "
-            >
-              Visit Project
+        <Link href={link} target="_blank" className="group">
+          <h2 className="text-4xl font-bold text-light group-hover:text-primary transition-colors
+            lg:text-3xl xs:text-2xl">
+            {title}
+          </h2>
+        </Link>
+        <p className="my-4 text-base text-light/50 text-justify leading-relaxed sm:text-sm">
+          {summary}
+        </p>
+        <div className="mt-2 flex items-center gap-4">
+          {github && (
+            <Link href={github} target="_blank"
+              className="w-9 h-9 flex items-center justify-center rounded-full
+                border border-white/[0.08] bg-white/[0.04] text-light/40 hover:text-light
+                transition-colors"
+              aria-label="GitHub">
+              <GithubIcon className="w-5 h-5" />
             </Link>
-          </div>
+          )}
+          <Link
+            href={link}
+            target="_blank"
+            className="rounded-full bg-primary text-dark px-6 py-2.5 text-sm font-bold
+              hover:bg-primary/90 btn-glow transition-all sm:px-4"
+          >
+            Visit Project
+          </Link>
         </div>
-      </article>
+      </div>
+    </motion.article>
   );
 };
 
-const Project = ({ title, type, img, link, github, summary }) => {
+const Project = ({ title, type, img, link, github, summary, index }) => {
+  const num = String(index + 1).padStart(2, "0");
   return (
-      <article
-          className="w-full flex flex-col items-center justify-center rounded-2xl
-    border border-solid border-dark/10 bg-light/80 p-6 relative dark:bg-dark/60 dark:border-light/10 xs:p-4 shadow-soft
-    "
-      >
-        <Link
+    <motion.article
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      viewport={{ once: true }}
+      className="w-full flex flex-col items-center justify-center rounded-2xl glass-dark overflow-hidden group"
+    >
+      <Link href={link} target="_blank" className="w-full overflow-hidden">
+        <FramerImage
+          src={img}
+          alt={title}
+          className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
+          whileHover={{ scale: 1.04 }}
+          transition={{ duration: 0.4 }}
+          sizes="(max-width: 768px) 100vw, 50vw"
+        />
+      </Link>
+
+      <div className="w-full flex flex-col items-start justify-between p-6 xs:p-4">
+        <div className="flex items-center justify-between w-full mb-2">
+          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-electric/60">
+            {type}
+          </span>
+          <span className="text-3xl font-display font-bold text-white/[0.06]">{num}</span>
+        </div>
+        <Link href={link} target="_blank" className="group/title">
+          <h2 className="text-2xl font-bold text-light group-hover/title:text-primary transition-colors lg:text-xl">
+            {title}
+          </h2>
+        </Link>
+        <p className="mt-3 mb-4 text-sm text-light/45 text-justify leading-relaxed">{summary}</p>
+
+        <div className="w-full flex items-center justify-between">
+          <Link
             href={link}
             target="_blank"
-            className="w-full cursor-pointer overflow-hidden rounded-2xl"
-        >
-          <FramerImage
-              src={img}
-              alt={title}
-              className="w-full h-auto"
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.2 }}
-          />
-        </Link>
-
-        <div className="w-full flex flex-col items-start justify-between mt-4">
-        <span className="text-primary font-semibold text-sm uppercase tracking-[0.2em] dark:text-primaryDark lg:text-xs">
-          {type}
-        </span>
-          <Link
-              href={link}
-              target="_blank"
-              className="hover:underline underline-offset-2"
+            className="text-sm font-semibold text-electric hover:text-primaryDark transition-colors
+              underline underline-offset-4 decoration-electric/40"
           >
-            <h2 className="my-2 w-full text-left text-3xl font-bold lg:text-2xl">
-              {title}
-            </h2>
+            Visit Project →
           </Link>
-          <p className="my-2 font-medium text-dark/80 dark:text-light/80 sm:text-sm text-justify">
-            {summary}
-          </p>
-
-          <div className="w-full flex items-center justify-between">
-            <Link
-                href={link}
-                target="_blank"
-                className="text-base font-semibold underline decoration-primary/70 underline-offset-4 md:text-sm"
-            >
-              Visit
+          {github && (
+            <Link href={github} target="_blank"
+              className="w-8 h-8 flex items-center justify-center rounded-full
+                border border-white/[0.08] bg-white/[0.04] text-light/40 hover:text-light transition-colors"
+              aria-label="GitHub">
+              <GithubIcon className="w-4 h-4" />
             </Link>
-            {github && (
-                <Link href={github} target="_blank" className="w-8 md:w-6">
-                  <GithubIcon />
-                </Link>
-            )}
-          </div>
+          )}
         </div>
-      </article>
+      </div>
+    </motion.article>
   );
 };
 
 const projects = () => {
   return (
-      <>
-        <Head>
-          <title>Rashed Rahat | Projects</title>
-        </Head>
-        <TransitionEffect />
-        <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light">
-          <Layout className="pt-16">
-            <div className="grid grid-cols-12 gap-10 items-end mb-12">
-              <div className="col-span-6 lg:col-span-12">
-                <p className="text-xs uppercase tracking-[0.35em] text-dark/60 dark:text-light/60">
-                  Selected Work
-                </p>
-                <AnimatedText
-                    text="Products shipped with focus on scale, speed, and clarity."
-                    className="mt-4 !text-6xl !text-left lg:!text-5xl sm:!text-4xl xs:!text-3xl"
-                />
-              </div>
-              <div className="col-span-6 lg:col-span-12">
-                <p className="text-base text-dark/70 dark:text-light/70">
-                  Large-scale front-end engineering, AI integration, and performance-driven product delivery across education, fintech, and commerce.
-                </p>
-              </div>
-            </div>
+    <>
+      <Head>
+        <title>Rashed Rahat | Projects</title>
+      </Head>
+      <TransitionEffect />
+      <main className="w-full mb-16 flex flex-col items-center justify-center text-light">
+        <Layout className="pt-16 aurora-bg">
 
-            <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
-              <div className="col-span-12">
-                <FeaturedProject
-                    type="Online Learning Platform"
-                    title="Shikho"
-                    summary="Built and maintained the core front-end using React, Next.js, and TypeScript for Bangladesh’s largest digital learning platform. Served 2.5M+ users and led front-end architecture for exam delivery, cross-platform UI, and 25% performance improvement."
-                    img={project1}
-                    link="https://shikho.com"
-                />
-              </div>
-              <div className="col-span-6 sm:col-span-12">
-                <Project
-                    type="Real-Time Exam System"
-                    title="Shikho Exam Portal"
-                    summary="Architected and implemented a real-time exam platform supporting MCQ + CQ sessions for 15K+ concurrent users. Designed an optimized React/Next.js UI with live timing, auto-submit, and validation — delivering a low-latency, mobile-first experience nationwide."
-                    img={project2}
-                    link="https://app.shikho.com"
-                />
-              </div>
-              <div className="col-span-6 sm:col-span-12">
-                <Project
-                    type="AI Learning Assistant"
-                    img={project5}
-                    title="Shikho AI"
-                    summary="Led front-end development for Shikho AI, an NLP-powered assistant that generates curriculum-aligned answers in Bangla. Built chat UX, math rendering (Markdown/LaTeX), and guardrails with React and TypeScript; collaborated with AI and backend teams to enhance response speed and reliability."
-                    link="https://ai.shikho.com"
-                />
-              </div>
-
-              <div className="col-span-6 sm:col-span-12">
-                <Project
-                    type="eCommerce"
-                    title="Shikho E-Shop"
-                    summary="Developed a responsive storefront for courses, T-shirts, PDFs, and books using React and Tailwind CSS. Implemented filters, cart logic, and secure checkout; optimized media and bundle sizes to improve mobile performance and UX"
-                    img={project4}
-                    link="https://shop.shikho.com"
-                />
-              </div>
-              <div className="col-span-6 sm:col-span-12">
-                <Project
-                    type="Career Skills Platform"
-                    title="Bohubrihi"
-                    img={project3}
-                    summary="Contributed to UI redesign and front-end optimization for a self-learning platform offering career and technical courses. Improved page load speed and component consistency across modules in React and Next.js."
-                    link="https://bohubrihi.com"
-                />
-              </div>
+          {/* Page header */}
+          <div className="grid grid-cols-12 gap-10 items-end mb-16">
+            <div className="col-span-6 lg:col-span-12">
+              <p className="text-xs uppercase tracking-[0.35em] text-electric/60 mb-4">
+                Selected Work
+              </p>
+              <h1 className="text-7xl font-display font-bold leading-tight text-light
+                lg:text-5xl sm:text-4xl xs:text-3xl">
+                Products shipped with{" "}
+                <span className="gradient-text">precision</span>.
+              </h1>
             </div>
-          </Layout>
-        </main>
-      </>
+            <div className="col-span-6 lg:col-span-12">
+              <p className="text-base text-light/45 leading-relaxed">
+                Large-scale front-end engineering, AI integration, and performance-driven product delivery
+                across education, fintech, and commerce.
+              </p>
+            </div>
+          </div>
+
+          {/* Projects grid */}
+          <div className="grid grid-cols-12 gap-16 gap-y-20 xl:gap-x-10 lg:gap-x-8 md:gap-y-16 sm:gap-x-0">
+            <div className="col-span-12">
+              <FeaturedProject
+                type="Online Learning Platform"
+                title="Shikho"
+                summary="Built and maintained the core front-end using React, Next.js, and TypeScript for Bangladesh's largest digital learning platform. Served 2.5M+ users and led front-end architecture for exam delivery, cross-platform UI, and 25% performance improvement."
+                img={project1}
+                link="https://shikho.com"
+              />
+            </div>
+            <div className="col-span-6 sm:col-span-12">
+              <Project
+                index={0}
+                type="Real-Time Exam System"
+                title="Shikho Exam Portal"
+                summary="Architected and implemented a real-time exam platform supporting MCQ + CQ sessions for 15K+ concurrent users. Designed an optimized React/Next.js UI with live timing, auto-submit, and validation."
+                img={project2}
+                link="https://app.shikho.com"
+              />
+            </div>
+            <div className="col-span-6 sm:col-span-12">
+              <Project
+                index={1}
+                type="AI Learning Assistant"
+                img={project5}
+                title="Shikho AI"
+                summary="Led front-end development for Shikho AI, an NLP-powered assistant generating curriculum-aligned answers in Bangla. Built chat UX, math rendering (Markdown/LaTeX), and guardrails with React and TypeScript."
+                link="https://ai.shikho.com"
+              />
+            </div>
+            <div className="col-span-6 sm:col-span-12">
+              <Project
+                index={2}
+                type="eCommerce"
+                title="Shikho E-Shop"
+                summary="Developed a responsive storefront for courses, T-shirts, PDFs, and books using React and Tailwind CSS. Implemented filters, cart logic, and secure checkout with optimized mobile performance."
+                img={project4}
+                link="https://shop.shikho.com"
+              />
+            </div>
+            <div className="col-span-6 sm:col-span-12">
+              <Project
+                index={3}
+                type="Career Skills Platform"
+                title="Bohubrihi"
+                img={project3}
+                summary="Contributed to UI redesign and front-end optimization for a self-learning platform offering career and technical courses. Improved page load speed and component consistency across modules."
+                link="https://bohubrihi.com"
+              />
+            </div>
+          </div>
+        </Layout>
+      </main>
+    </>
   );
 };
 

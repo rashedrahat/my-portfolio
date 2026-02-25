@@ -1,33 +1,33 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import {
-  TwitterIcon,
-  DribbbleIcon,
   GithubIcon,
   LinkedInIcon,
-  PinterestIcon,
-  SunIcon,
-  MoonIcon, StackOverflowIcon,
+  StackOverflowIcon,
 } from "./Icons";
 import Logo from "./Logo";
 import { motion } from "framer-motion";
-import useThemeSwitcher from "./hooks/useThemeSwitcher";
 
 const CustomLink = ({ href, title, className = "" }) => {
   const router = useRouter();
+  const isActive = router.asPath === href;
 
   return (
-    <Link href={href} className={`${className} relative group text-sm tracking-wide uppercase`}>
+    <Link
+      href={href}
+      className={`${className} relative group text-sm font-medium transition-colors
+        ${isActive ? "text-light" : "text-light/50 hover:text-light/90"}`}
+    >
       {title}
-
       <span
         className={`
-          h-[2px] inline-block  bg-primary
+          h-[2px] inline-block bg-primary rounded-full
           absolute left-0 -bottom-0.5
           group-hover:w-full transition-[width] ease duration-300
-          ${router.asPath === href ? "w-full" : "w-0"}
-          dark:bg-primaryDark`}
+          ${isActive ? "w-full" : "w-0"}
+        `}
       >
         &nbsp;
       </span>
@@ -37,6 +37,7 @@ const CustomLink = ({ href, title, className = "" }) => {
 
 const CustomMobileLink = ({ href, title, className = "", toggle }) => {
   const router = useRouter();
+  const isActive = router.asPath === href;
 
   const handleClick = () => {
     toggle();
@@ -45,19 +46,18 @@ const CustomMobileLink = ({ href, title, className = "", toggle }) => {
 
   return (
     <button
-      href={href}
-      className={`${className} relative group text-light dark:text-dark my-2 text-sm tracking-wide uppercase`}
+      className={`${className} relative group my-2 text-sm font-medium transition-colors
+        ${isActive ? "text-light" : "text-light/60 hover:text-light"}`}
       onClick={handleClick}
     >
       {title}
-
       <span
         className={`
-          h-[2px] inline-block  bg-light
+          h-[2px] inline-block bg-primary rounded-full
           absolute left-0 -bottom-0.5
           group-hover:w-full transition-[width] ease duration-300
-          ${router.asPath === href ? "w-full" : "w-0"}
-          dark:bg-dark`}
+          ${isActive ? "w-full" : "w-0"}
+        `}
       >
         &nbsp;
       </span>
@@ -66,8 +66,10 @@ const CustomMobileLink = ({ href, title, className = "", toggle }) => {
 };
 
 const NavBar = () => {
-  const [mode, setMode] = useThemeSwitcher();
   const [isOpen, setIsOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => { setMounted(true); }, []);
 
   const handleClick = () => {
     setIsOpen(!isOpen);
@@ -75,159 +77,152 @@ const NavBar = () => {
 
   return (
     <header
-      className="sticky top-0 w-full px-32 py-6 font-medium flex items-center justify-between
-    dark:text-light z-40 lg:px-16 md:px-12 sm:px-8
-    bg-light/70 dark:bg-dark/60 backdrop-blur-xl
-    "
+      className="sticky top-0 w-full font-medium text-light z-40
+      bg-dark/70 backdrop-blur-2xl border-b border-electric/[0.12]"
     >
+      <div className="max-w-[1680px] mx-auto px-32 py-5 flex items-center justify-between
+        lg:px-16 md:px-12 sm:px-8">
+
+      {/* Mobile hamburger */}
       <button
-        className=" flex-col justify-center items-center hidden lg:flex"
+        className="flex-col justify-center items-center hidden lg:flex"
         onClick={handleClick}
+        aria-label="Toggle menu"
       >
         <span
-          className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm  ${
+          className={`bg-light/80 block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
             isOpen ? "rotate-45 translate-y-1" : "-translate-y-0.5"
           }`}
-        ></span>
+        />
         <span
-          className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${
+          className={`bg-light/80 block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${
             isOpen ? "opacity-0" : "opacity-100"
-          } `}
-        ></span>
+          }`}
+        />
         <span
-          className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
+          className={`bg-light/80 block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
             isOpen ? "-rotate-45 -translate-y-1" : "translate-y-0.5"
-          } `}
-        ></span>
+          }`}
+        />
       </button>
 
+      {/* Desktop nav */}
       <div className="w-full flex justify-between items-center lg:hidden">
         <nav className="flex items-center justify-center gap-10">
-          <CustomLink href="/" title="Home" className="" />
-          <CustomLink href="/about" title="About" className="" />
-          <CustomLink href="/projects" title="Projects" className="" />
+          <CustomLink href="/"        title="Home"     />
+          <CustomLink href="/about"   title="About"    />
+          <CustomLink href="/projects" title="Projects" />
         </nav>
 
-        <nav className="flex items-center justify-center flex-wrap">
+        <nav className="flex items-center justify-center gap-1">
           <motion.a
             href="https://stackoverflow.com/users/10427807/rashed-rahat"
-            target={"_blank"}
+            target="_blank"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
-            className="w-6 mr-3 text-dark/80 hover:text-dark dark:text-light/80 dark:hover:text-light transition-colors"
+            className="w-5 mx-2 text-light/40 hover:text-light/80 transition-colors"
+            aria-label="StackOverflow"
           >
             <StackOverflowIcon />
           </motion.a>
           <motion.a
             href="https://github.com/rashedrahat"
-            target={"_blank"}
-            className="w-6 mx-3 text-dark/80 hover:text-dark dark:text-light/80 dark:hover:text-light transition-colors"
+            target="_blank"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
+            className="w-5 mx-2 text-light/40 hover:text-light/80 transition-colors"
+            aria-label="GitHub"
           >
             <GithubIcon />
           </motion.a>
           <motion.a
             href="https://linkedin.com/in/rashedrahat"
-            target={"_blank"}
-            className="w-6 mx-3 text-dark/80 hover:text-dark dark:text-light/80 dark:hover:text-light transition-colors"
+            target="_blank"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
+            className="w-5 mx-2 text-light/40 hover:text-light/80 transition-colors"
+            aria-label="LinkedIn"
           >
             <LinkedInIcon />
           </motion.a>
 
-          <button
-            onClick={() => setMode(mode === "light" ? "dark" : "light")}
-            className={`w-9 h-9 ml-3 flex items-center justify-center rounded-full p-1 ease
-      ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}
-      `}
-          >
-            {mode === "light" ? (
-              <SunIcon className={"fill-dark"} />
-            ) : (
-              <MoonIcon className={"fill-dark"} />
-            )}
-          </button>
         </nav>
       </div>
 
-      {isOpen ? (
-        <motion.div
-          initial={{ scale: 0, opacity: 0, x: "-50%", y: "-50%" }}
-          animate={{ scale: 1, opacity: 1 }}
-          className="min-w-[70vw] sm:min-w-[90vw] flex flex-col justify-between z-30 items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
-      bg-dark/90 dark:bg-light/85 rounded-2xl backdrop-blur-xl py-24 shadow-soft
-      "
-        >
-          <nav className="flex items-center flex-col justify-center">
-            <CustomMobileLink
-              href="/"
-              title="Home"
-              className=""
-              toggle={handleClick}
-            />
-            <CustomMobileLink
-              href="/about"
-              title="About"
-              className=""
-              toggle={handleClick}
-            />
-            <CustomMobileLink
-              href="/projects"
-              title="Projects"
-              className=""
-              toggle={handleClick}
-            />
-          </nav>
+      {/* Mobile menu overlay — rendered via portal so backdrop-filter on header doesn't trap it */}
+      {isOpen && mounted && createPortal(
+        <>
+          {/* Backdrop */}
+          <div
+            className="fixed top-0 left-0 w-screen h-screen z-40 bg-dark/60 backdrop-blur-sm"
+            onClick={handleClick}
+          />
 
-          <nav className="flex items-center justify-center flex-wrap mt-2">
-            <motion.a
-              href="https://stackoverflow.com/users/10427807/rashed-rahat"
-              target={"_blank"}
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.9 }}
-              className="w-6 mr-3 text-light dark:text-dark"
-            >
-              <StackOverflowIcon />
-            </motion.a>
-            <motion.a
-              href="https://github.com/rashedrahat"
-              target={"_blank"}
-              className="w-6 mx-3 bg-light rounded-full dark:bg-dark sm:mx-1"
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <GithubIcon />
-            </motion.a>
-            <motion.a
-              href="https://linkedin.com/in/rashedrahat"
-              target={"_blank"}
-              className="w-6 mx-3 text-light dark:text-dark"
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <LinkedInIcon />
-            </motion.a>
-
+          {/* Centering wrapper */}
+          <div className="fixed top-0 left-0 w-screen h-screen z-50 flex items-center justify-center pointer-events-none">
+          <motion.div
+            initial={{ scale: 0.92, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
+            className="min-w-[70vw] sm:min-w-[90vw] flex flex-col justify-center items-center
+              pointer-events-auto
+              glass-dark rounded-2xl py-12 shadow-glow-electric"
+          >
+            {/* Close button */}
             <button
-              onClick={() => setMode(mode === "light" ? "dark" : "light")}
-              className={`w-6 h-6 flex items-center justify-center rounded-full p-1
-      ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}
-      `}
+              onClick={handleClick}
+              className="absolute top-4 right-4 text-light/50 hover:text-light transition-colors text-xl leading-none"
+              aria-label="Close menu"
             >
-              {mode === "light" ? (
-            <SunIcon className={"fill-dark"} />
-          ) : (
-            <MoonIcon className={"fill-dark"} />
-          )}
+              ✕
             </button>
-          </nav>
-        </motion.div>
-      ) : null}
 
+            <nav className="flex items-center flex-col justify-center gap-1">
+              <CustomMobileLink href="/"         title="Home"     toggle={handleClick} />
+              <CustomMobileLink href="/about"    title="About"    toggle={handleClick} />
+              <CustomMobileLink href="/projects" title="Projects" toggle={handleClick} />
+            </nav>
+
+            <nav className="flex items-center justify-center gap-4 mt-8">
+              <motion.a
+                href="https://stackoverflow.com/users/10427807/rashed-rahat"
+                target="_blank"
+                whileHover={{ y: -2 }}
+                whileTap={{ scale: 0.9 }}
+                className="w-5 text-light/60 hover:text-light transition-colors"
+              >
+                <StackOverflowIcon />
+              </motion.a>
+              <motion.a
+                href="https://github.com/rashedrahat"
+                target="_blank"
+                whileHover={{ y: -2 }}
+                whileTap={{ scale: 0.9 }}
+                className="w-5 text-light/60 hover:text-light transition-colors"
+              >
+                <GithubIcon />
+              </motion.a>
+              <motion.a
+                href="https://linkedin.com/in/rashedrahat"
+                target="_blank"
+                whileHover={{ y: -2 }}
+                whileTap={{ scale: 0.9 }}
+                className="w-5 text-light/60 hover:text-light transition-colors"
+              >
+                <LinkedInIcon />
+              </motion.a>
+            </nav>
+          </motion.div>
+          </div>
+        </>,
+        document.body
+      )}
+
+      {/* Centered Logo */}
       <div className="absolute left-[50%] top-2 translate-x-[-50%]">
         <Logo />
+      </div>
+
       </div>
     </header>
   );
