@@ -11,6 +11,7 @@ import project4 from "../../public/images/projects/shikho-e-shop.png";
 import project5 from "../../public/images/projects/shikho-ai.png";
 import { motion } from "framer-motion";
 import TransitionEffect from "@/components/TransitionEffect";
+import TransmaxCaseStudy from "@/components/TransmaxCaseStudy";
 
 const FramerImage = motion(Image);
 
@@ -143,14 +144,14 @@ const projects = () => {
   return (
     <>
       <Head>
-        <title>Rashed Rahat | Projects</title>
+        <title>Md Rashed Ahmed (Rashed Rahat) | Projects</title>
       </Head>
       <TransitionEffect />
       <main className="w-full mb-16 flex flex-col items-center justify-center text-light">
         <Layout className="pt-16 aurora-bg">
 
           {/* Page header */}
-          <div className="grid grid-cols-12 gap-10 items-end mb-16">
+          <div className="grid grid-cols-12 gap-10 lg:gap-x-0 items-end mb-16">
             <div className="col-span-6 lg:col-span-12">
               <p className="text-xs uppercase tracking-[0.35em] text-electric/60 mb-4">
                 Selected Work
@@ -163,8 +164,8 @@ const projects = () => {
             </div>
             <div className="col-span-6 lg:col-span-12">
               <p className="text-base text-light/45 leading-relaxed">
-                Large-scale front-end engineering, AI integration, and performance-driven product delivery
-                across education, fintech, and commerce.
+                Large-scale front-end engineering, real-time systems, AI integration, and performance-driven
+                product delivery across education, fintech, and commerce.
               </p>
             </div>
           </div>
@@ -172,10 +173,13 @@ const projects = () => {
           {/* Projects grid */}
           <div className="grid grid-cols-12 gap-16 gap-y-20 xl:gap-x-10 lg:gap-x-8 md:gap-y-16 sm:gap-x-0">
             <div className="col-span-12">
+              <TransmaxCaseStudy />
+            </div>
+            <div className="col-span-12">
               <FeaturedProject
                 type="Online Learning Platform"
                 title="Shikho"
-                summary="Built and maintained the core front-end using React, Next.js, and TypeScript for Bangladesh's largest digital learning platform. Served 2.5M+ users and led front-end architecture for exam delivery, cross-platform UI, and 25% performance improvement."
+                summary="Built and maintained the core front-end using React, Next.js, and TypeScript for Bangladesh's largest digital learning platform. A platform now serving 3M+ students. Led front-end architecture for exam delivery and cross-platform UI, and improved load times by 20-25%."
                 img={project1}
                 link="https://shikho.com"
               />
@@ -185,7 +189,7 @@ const projects = () => {
                 index={0}
                 type="Real-Time Exam System"
                 title="Shikho Exam Portal"
-                summary="Architected and implemented a real-time exam platform supporting MCQ + CQ sessions for 15K+ concurrent users. Designed an optimized React/Next.js UI with live timing, auto-submit, and validation."
+                summary="Architected and implemented a real-time exam platform supporting MCQ + CQ sessions for 15,000+ concurrent students. Designed an optimised React/Next.js UI with live timing, auto-submit, and validation."
                 img={project2}
                 link="https://app.shikho.com"
               />

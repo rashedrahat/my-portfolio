@@ -2,6 +2,7 @@ import Awards from "@/components/Awards";
 import Education from "@/components/Education";
 import Experience from "@/components/Experience";
 import Layout from "@/components/Layout";
+import Recommendations from "@/components/Recommendations";
 import Skills from "@/components/Skills";
 import TransitionEffect from "@/components/TransitionEffect";
 import { motion, useInView, useMotionValue, useSpring } from "framer-motion";
@@ -34,23 +35,23 @@ const AnimatedNumbers = ({ value }) => {
 const about = () => {
   const infoCards = [
     { label: "Focus", value: "WCAG 2.1 AA, design systems", accent: "text-cyan border-cyan/20 bg-cyan/[0.06]" },
-    { label: "Domains", value: "SaaS · EdTech · Enterprise",  accent: "text-electric border-electric/20 bg-electric/[0.06]" },
-    { label: "Impact", value: "2.5M+ learners served",      accent: "text-primary border-primary/20 bg-primary/[0.06]" },
+    { label: "Domains", value: "SaaS · EdTech · Transport",   accent: "text-electric border-electric/20 bg-electric/[0.06]" },
+    { label: "Impact", value: "3M+ learners served", accent: "text-primary border-primary/20 bg-primary/[0.06]" },
     { label: "Scale", value: "15K+ concurrent users",       accent: "text-primaryDark border-primaryDark/20 bg-primaryDark/[0.06]" },
   ];
 
   return (
     <>
       <Head>
-        <title>Rashed Rahat | About</title>
+        <title>Md Rashed Ahmed (Rashed Rahat) | About</title>
       </Head>
       <TransitionEffect />
 
       <main className="flex w-full flex-col text-light">
 
         {/* ── HERO — exact viewport height, equal top/bottom gap ──── */}
-        <section className="relative w-full h-[calc(100vh-72px)] aurora-bg overflow-hidden
-          px-32 xl:px-24 lg:px-16 md:px-12 sm:px-8
+        <section className="relative w-full h-[calc(100vh-72px)] max-h-[900px] aurora-bg overflow-hidden
+          layout-pad
           md:h-auto md:py-12">
 
           <div className="relative z-10 h-full grid grid-cols-12 gap-10 items-start
@@ -106,7 +107,7 @@ const about = () => {
                 <div className="absolute inset-0 ring-1 ring-electric/15 pointer-events-none z-20" />
                 <Image
                   src={profilePic}
-                  alt="Rashed Rahat"
+                  alt="Md Rashed Ahmed"
                   className="w-full h-full object-cover object-center relative z-10"
                   priority
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -154,29 +155,30 @@ const about = () => {
               </p>
               <div className="pl-6 border-l-2 border-electric/25 space-y-4 mb-6">
                 <p className="font-bold text-xl text-light leading-snug">
-                  I'm Rashed — Frontend Engineer.
+                  I'm Rashed — Senior Frontend Engineer.
                 </p>
                 <p className="font-medium text-light/55 leading-relaxed">
-                  Building production-grade platforms across SaaS, EdTech, and enterprise.
+                  Building production-grade platforms across SaaS, EdTech, and transport technology.
                   I work in{" "}
-                  <span className="text-light/85 font-semibold">React, Next.js, and TypeScript</span>{" "}
-                  with deep focus on{" "}
-                  <span className="text-light/85 font-semibold">WCAG 2.1 AA accessibility</span>,
-                  design systems, and performance engineering.
+                  <span className="text-light/85 font-semibold">React, TypeScript, and Next.js</span>{" "}
+                  with a focus on{" "}
+                  <span className="text-light/85 font-semibold">map-driven interfaces</span>,
+                  micro-frontends, design systems, and performance.
                 </p>
                 <p className="font-medium text-light/55 leading-relaxed">
-                  I've shipped across large monorepos, GraphQL and REST integrations,
+                  Currently part of a team migrating a real-time operations map to a modern shared
+                  platform. I've shipped across large monorepos, GraphQL and REST integrations,
                   and test-driven UI delivery — at scale.
                 </p>
               </div>
               <div className="flex items-center gap-2 flex-wrap pl-6">
                 <span className="text-xs font-semibold uppercase tracking-[0.2em] px-3 py-1
                   rounded-full border border-cyan/20 bg-cyan/[0.06] text-cyan">
-                  Sydney, AU
+                  Brisbane, AU
                 </span>
                 <span className="text-xs font-semibold uppercase tracking-[0.2em] px-3 py-1
                   rounded-full border border-electric/20 bg-electric/[0.06] text-electric">
-                  Open to full-time
+                  Open to permanent &amp; contract
                 </span>
                 <span className="text-xs font-semibold uppercase tracking-[0.2em] px-3 py-1
                   rounded-full border border-primary/20 bg-primary/[0.06] text-primary">
@@ -188,8 +190,8 @@ const about = () => {
             {/* Right — stat cards */}
             <div className="col-span-5 lg:col-span-1 flex flex-col gap-3 justify-center">
               {[
-                { value: "6+",    label: "Years of experience",  accent: "text-electric", border: "border-electric/15", bg: "bg-electric/[0.04]" },
-                { value: "2.5M+", label: "Learners served",      accent: "text-cyan",     border: "border-cyan/15",     bg: "bg-cyan/[0.04]"     },
+                { value: "7+",    label: "Years of experience",  accent: "text-electric", border: "border-electric/15", bg: "bg-electric/[0.04]" },
+                { value: "3M+",   label: "Learners served",      accent: "text-cyan",     border: "border-cyan/15",     bg: "bg-cyan/[0.04]"     },
                 { value: "15K+",  label: "Concurrent users",     accent: "text-primary",  border: "border-primary/15", bg: "bg-primary/[0.04]"  },
               ].map((stat) => (
                 <div
@@ -210,6 +212,7 @@ const about = () => {
           <Skills />
           <Experience />
           <Awards />
+          <Recommendations />
           <Education />
         </Layout>
       </main>

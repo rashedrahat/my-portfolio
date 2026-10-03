@@ -137,3 +137,25 @@
   0%, 100% { opacity: 0.6; }
   50%       { opacity: 1; }
 }
+
+/* Caps page content to the navbar's content width (1424px) on very wide screens.
+   Backgrounds stay full-bleed; only the horizontal padding grows. */
+.layout-pad {
+  --pad: 8rem;
+  padding-left: max(var(--pad), calc((100% - 1424px) / 2));
+  padding-right: max(var(--pad), calc((100% - 1424px) / 2));
+}
+@media (max-width: 1279px) { .layout-pad { --pad: 6rem; } }
+@media (max-width: 1023px) { .layout-pad { --pad: 4rem; } }
+@media (max-width: 767px)  { .layout-pad { --pad: 3rem; } }
+@media (max-width: 639px)  { .layout-pad { --pad: 2rem; } }
+
+/* Home hero: on very tall screens, centre the capped-height hero in the viewport */
+.home-center {
+  margin-top: max(0px, calc((100vh - 72px - 900px) / 2));
+}
+
+/* Home hero: match the navbar's 8rem side padding once the 1680px cap is reached */
+@media (min-width: 1680px) {
+  .home-center { padding-left: 8rem; padding-right: 8rem; }
+}

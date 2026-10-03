@@ -3,7 +3,7 @@ import React from "react";
 const Awards = () => {
   return (
     <section className="my-24">
-      <div className="grid grid-cols-12 gap-10 items-end mb-10">
+      <div className="grid grid-cols-12 gap-10 lg:gap-x-0 items-end mb-10">
         <div className="col-span-4 lg:col-span-12">
           <p className="text-xs uppercase tracking-[0.35em] text-electric/60">
             Recognition
@@ -24,7 +24,7 @@ const Awards = () => {
           <h3 className="text-2xl font-bold mt-3 text-light">Learner First Award</h3>
           <p className="mt-3 text-light/50 leading-relaxed">
             Recognized for UX quality, accessibility improvements, and product
-            impact at Shikho Technologies.
+            impact at Shikho.
           </p>
         </div>
       </div>

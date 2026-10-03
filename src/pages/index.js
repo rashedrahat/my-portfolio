@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, useInView, useMotionValue, useSpring } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import profilePic from "../../public/images/profile/my-pic.jpg";
+import profilePic from "../../public/images/profile/my-pic-color.jpg";
 
 const AnimatedStat = ({ value, suffix = "", prefix = "", decimals = 0, label }) => {
     const ref = useRef(null);
@@ -52,11 +52,12 @@ export default function Home() {
     return (
         <>
             <Head>
-                <title>Rashed Rahat | Home</title>
+                <title>Md Rashed Ahmed (Rashed Rahat) | Home</title>
             </Head>
             <TransitionEffect />
 
-            <main className="text-light w-full max-w-[1680px] mx-auto h-[calc(100vh-72px)] bg-dark px-12 py-5
+            <main className="text-light w-full max-w-[1680px] mx-auto h-[calc(100vh-72px)] max-h-[900px] bg-dark px-12 py-5
+                home-center
                 xl:px-8 lg:px-6 md:px-4 sm:px-3 overflow-hidden">
 
                 <section className="relative h-full dot-grid rounded-[2rem] overflow-hidden flex flex-col
@@ -81,11 +82,11 @@ export default function Home() {
                             <div className="flex flex-wrap items-center gap-2 mb-5 md:mb-3">
                                 <span className="px-3 py-1 rounded-full text-[10px] uppercase tracking-[0.3em] text-light/45
                                     border border-white/[0.08] bg-white/[0.04]">
-                                    Frontend Engineer
+                                    Senior Frontend Engineer
                                 </span>
                                 <span className="px-3 py-1 rounded-full text-[10px] uppercase tracking-[0.3em] text-electric/70
                                     border border-electric/20 bg-electric/[0.07]">
-                                    Sydney, Australia
+                                    Brisbane, Australia
                                 </span>
                             </div>
 
@@ -117,6 +118,11 @@ export default function Home() {
                                 </span>
                             </div>
 
+                            <p className="mt-4 max-w-xl text-sm leading-relaxed text-light/50 md:mt-3 md:text-[13px]">
+                                Senior Frontend Engineer building map-driven, real-time web applications
+                                with React, TypeScript and Mapbox. Currently at Transmax in Brisbane.
+                            </p>
+
                             {/* CTAs */}
                             <div className="mt-5 md:mt-3 flex flex-wrap items-center gap-4">
                                 <Link
@@ -146,9 +152,9 @@ export default function Home() {
 
                             {/* Stats */}
                             <div className="mt-5 md:mt-3 grid grid-cols-3 gap-2 w-full max-w-md">
-                                <AnimatedStat value={2.5} decimals={1} suffix="M+" label="Learners" />
+                                <AnimatedStat value={3} decimals={0} suffix="M+" label="Learners" />
                                 <AnimatedStat value={15}  decimals={0} suffix="K+" label="Concurrent" />
-                                <AnimatedStat value={6}   decimals={0} suffix="+"  label="Yrs exp." />
+                                <AnimatedStat value={7}   decimals={0} suffix="+"  label="Yrs exp." />
                             </div>
 
                             {/* Availability */}
@@ -158,7 +164,7 @@ export default function Home() {
                                     <span className="relative inline-flex rounded-full h-2 w-2 bg-green-400" />
                                 </span>
                                 <span className="text-[10px] uppercase tracking-[0.25em] md:tracking-[0.1em] text-light/30">
-                                    Open to roles · React · TypeScript · Next.js
+                                    Open to permanent &amp; contract roles · React · TypeScript · Mapbox
                                 </span>
                             </div>
                         </div>
@@ -178,7 +184,7 @@ export default function Home() {
 
                                 <Image
                                     src={profilePic}
-                                    alt="Rashed Rahat"
+                                    alt="Md Rashed Ahmed"
                                     className="w-full h-auto rounded-[1.6rem] relative z-10"
                                     priority
                                     sizes="(max-width: 768px) 80vw, 30vw"
@@ -197,10 +203,10 @@ export default function Home() {
                         <div className="border-t border-white/[0.05] bg-dark/20 backdrop-blur-sm px-5 py-2.5 overflow-hidden marquee">
                             <div className="flex items-center gap-8 whitespace-nowrap marquee-track
                                 text-[10px] uppercase tracking-[0.35em] text-light/25">
-                                {["React", "Next.js", "TypeScript", "Accessibility", "Design Systems",
-                                  "Performance", "GraphQL", "Testing",
-                                  "React", "Next.js", "TypeScript", "Accessibility", "Design Systems",
-                                  "Performance", "GraphQL", "Testing"].map((skill, i) => (
+                                {["React", "TypeScript", "Mapbox", "Micro-frontends", "Next.js", "Design Systems",
+                                  "Accessibility", "GraphQL", "Testing",
+                                  "React", "TypeScript", "Mapbox", "Micro-frontends", "Next.js", "Design Systems",
+                                  "Accessibility", "GraphQL", "Testing"].map((skill, i) => (
                                     <span key={i} className="flex items-center gap-8">
                                         <span className="text-electric/30">·</span>
                                         {skill}

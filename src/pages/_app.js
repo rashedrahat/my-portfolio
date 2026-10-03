@@ -54,6 +54,20 @@ export default function App({ Component, pageProps }) {
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="description"
+          content="Senior Frontend Engineer in Brisbane, Australia. 7 years building map-driven, real-time web applications with React, TypeScript and Mapbox."
+        />
+        <meta name="theme-color" content="#070B14" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Md Rashed Ahmed | Senior Frontend Engineer" />
+        <meta
+          property="og:description"
+          content="Map-driven, real-time web applications with React, TypeScript and Mapbox. Based in Brisbane, open to permanent and contract roles."
+        />
+        <meta property="og:url" content="https://rashed-rahat.vercel.app" />
+        <meta property="og:image" content="https://rashed-rahat.vercel.app/images/profile/my-pic-color.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />

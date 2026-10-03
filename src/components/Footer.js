@@ -1,9 +1,12 @@
 import Link from "next/link";
 import React from "react";
+import ContactBand from "./ContactBand";
 import Layout from "./Layout";
 
 const Footer = () => {
   return (
+    <>
+    <ContactBand />
     <footer className="w-full border-t border-white/[0.06] font-medium text-base text-light/60">
       <Layout className="py-8 flex items-center justify-between lg:flex-col lg:gap-4 lg:py-6">
         <span className="text-light/40 text-sm">
@@ -18,7 +21,7 @@ const Footer = () => {
             className="text-light/70 hover:text-light transition-colors underline underline-offset-4 decoration-electric/50"
             target={"_blank"}
           >
-            Rashed Rahat
+            Md Rashed Ahmed
           </Link>
         </div>
         <Link
@@ -30,6 +33,7 @@ const Footer = () => {
         </Link>
       </Layout>
     </footer>
+    </>
   );
 };
 

@@ -6,7 +6,12 @@ const Skills = () => {
     {
       title: "Frontend Engineering",
       accent: "text-electric",
-      items: ["React", "Next.js", "TypeScript", "React Query", "Framer Motion"],
+      items: ["React", "TypeScript", "Next.js", "React Query", "Framer Motion"],
+    },
+    {
+      title: "Maps & Architecture",
+      accent: "text-primary",
+      items: ["Mapbox GL", "Google Maps API", "GeoJSON", "Micro-frontends", "Module Federation", "Monorepos"],
     },
     {
       title: "Accessibility & UI Standards",
@@ -16,12 +21,12 @@ const Skills = () => {
     {
       title: "State & APIs",
       accent: "text-primary",
-      items: ["GraphQL", "REST APIs", "Axios", "WebSockets", "Context API", "Redux"],
+      items: ["GraphQL", "REST APIs", "gRPC", "WebSockets", "Redux", "Zustand"],
     },
     {
       title: "Testing & Quality",
       accent: "text-primaryDark",
-      items: ["Jest", "React Testing Library", "Unit testing", "Integration testing", "CI quality gates"],
+      items: ["Jest", "React Testing Library", "Cypress", "Unit testing", "Integration testing", "CI quality gates"],
     },
     {
       title: "UI Systems & Design",
@@ -31,13 +36,18 @@ const Skills = () => {
     {
       title: "Performance & Delivery",
       accent: "text-cyan",
-      items: ["Code splitting", "Lazy loading", "Memoization", "Web Vitals", "CI/CD workflows"],
+      items: ["Code splitting", "Lazy loading", "Memoization", "Web Vitals", "GitLab CI/CD", "Kubernetes"],
+    },
+    {
+      title: "AI-Assisted Development",
+      accent: "text-primaryDark",
+      items: ["Claude Code", "Cursor", "Prompt design", "AI-assisted review", "AI-assisted testing"],
     },
   ];
 
   return (
     <section className="mt-24">
-      <div className="grid grid-cols-12 gap-10">
+      <div className="grid grid-cols-12 gap-10 lg:gap-x-0">
         <div className="col-span-4 lg:col-span-12 sticky top-24 self-start lg:static">
           <p className="text-xs uppercase tracking-[0.35em] text-electric/60">
             Capabilities
@@ -47,7 +57,7 @@ const Skills = () => {
             A balanced toolkit across product UI, accessibility, performance, and delivery in modern frontend stacks.
           </p>
           <div className="mt-8 space-y-3 lg:hidden">
-            {["React · Next.js · TypeScript", "WCAG 2.1 AA", "Design systems", "GraphQL & REST", "Test-driven UI"].map((item) => (
+            {["React · TypeScript · Next.js", "Mapbox & map-driven UI", "Micro-frontends", "GraphQL & REST", "Test-driven UI"].map((item) => (
               <div key={item} className="flex items-center gap-2.5">
                 <span className="w-1 h-1 rounded-full bg-electric/50 shrink-0" />
                 <span className="text-sm text-light/35 font-medium">{item}</span>
